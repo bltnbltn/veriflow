@@ -38,7 +38,7 @@
 /* Colours --------------------------------- */
 
 :root {
-  --text-color: ##141714;
+  --text-color: #141714;
   --white-text-color: #fff;
   --background-color: #fff;
   --accent-color: #489870;
@@ -79,8 +79,8 @@ a {
 }
 
 .nav_logo {
-  width: 38px;
-  height: 38px;
+  width: 68px;
+  height: 68px;
 }
 
 .nav_logo a {
