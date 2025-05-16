@@ -25,15 +25,6 @@
   src: url('./fonts/Colgent-Regular.woff') format('woff');
 }
 
-@font-face {
-  font-family: Neue Montreal;
-  src: url('./fonts/PPNeueMontreal-Book.woff') format('woff');
-}
-
-@font-face {
-  font-family: Ygro;
-  src: url('./fonts/YgroSansBeta-Book.otf') format('woff');
-}
 
 /* Colours --------------------------------- */
 
@@ -107,7 +98,7 @@ a {
 
 .nav_menu li a {
   font-size: 18px;
-  font-family: Neue Montreal;
+  font-family: Pretendard;
   letter-spacing: 0.5px;
   text-decoration: none;
   padding: 8px 22px;
@@ -174,7 +165,7 @@ a {
 }
 
 .main_title {
-  font-family: Neue Montreal;
+  font-family: Pretendard;
   font-size: 24px;
   letter-spacing: -0.01em;
   color: var(--text-color);
@@ -191,7 +182,7 @@ a {
   align-items: center;
   text-align: center;
   margin: 40px auto;
-  font-family: Neue Montreal;
+  font-family: Pretendard;
   letter-spacing: 0.5px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
@@ -265,7 +256,7 @@ a {
 
 .project_title:first-child {
   color: var(--text-color);
-  font-family: Neue Montreal, serif;
+  font-family: Pretendard, serif;
   letter-spacing: 0.5px;
   font-weight: 400;
   font-size: 24px;
@@ -281,7 +272,7 @@ a {
 
 .project_tag {
   display: inline-block;
-  font-family: Neue Montreal;
+  font-family: Pretendard;
   letter-spacing: 0.5px;
   font-size: 14px;
   color: #969996;
@@ -349,9 +340,10 @@ a {
   text-align: center;
   padding: 8rem 4rem;
   background-color: #fff;
-  font-family: Neue Montreal;
+  font-family: Pretendard;
   letter-spacing: 0.5px;
   font-size: 14px;
+  color: #4d4d4d;
 }
 
 .social_link p {
@@ -453,7 +445,7 @@ a {
   border: none;
   padding: 0px;
   cursor: pointer;
-  font-family: Neue Montreal, serif;
+  font-family: Pretendard, serif;
   letter-spacing: 1%;
 }
 
