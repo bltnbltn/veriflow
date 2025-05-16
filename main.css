@@ -1,0 +1,640 @@
+/* Font Face --------------------------------- */
+
+@font-face {
+  font-family: Pretendard-Light;
+  src: url('./fonts/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: Pretendard-Regular;
+  src: url('./fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Pretendard-Medium;
+  src: url('./fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: Pretendard-SemiBold;
+  src: url('./fonts/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: Colgent;
+  src: url('./fonts/Colgent-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Neue Montreal;
+  src: url('./fonts/PPNeueMontreal-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: Ygro;
+  src: url('./fonts/YgroSansBeta-Book.otf') format('woff');
+}
+
+/* Colours --------------------------------- */
+
+:root {
+  --text-color: ##141714;
+  --white-text-color: #fff;
+  --background-color: #fff;
+  --accent-color: #489870;
+}
+
+/* Default --------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navbar --------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 40px;
+  background-color: transparent;
+  position: fixed; /* 상단 고정 */
+  top: 0; /* 화면 상단에 고정 */
+  left: 0; /* 화면 왼쪽에 고정 */
+  right: 0; /* 화면 오른쪽에 고정 */
+  z-index: 1000; /* 다른 요소들 위에 배치 */
+}
+
+.nav_logo {
+  width: 38px;
+  height: 38px;
+}
+
+.nav_logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav_menu {
+  display: flex;
+  left: 0;
+}
+
+.nav_menu li {
+  margin: 22px 0px;
+  text-decoration: none;
+}
+
+.nav_menu li a {
+  font-size: 16px;
+  font-family: Neue Montreal;
+  letter-spacing: 0.5px;
+  color: rgba(48, 46, 46, 0.5);
+  text-decoration: none;
+  padding: 8px 22px;
+  transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
+}
+
+.nav_menu li a:hover {
+  color: var(--text-color);
+}
+
+.nav_menu a.active {
+  color: var(--text-color);
+}
+
+.web,
+.casestudy {
+  padding-top: 80px;
+}
+
+/* Hamburger Menu 숨기기*/
+
+.navbar_toggleBtn {
+  display: none;
+  right: 5%;
+  font-size: 24px;
+}
+
+/* Hero --------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 부모 요소 높이를 화면 높이로 설정 */
+  overflow: hidden; /* 블러가 부모 영역을 넘지 않게 잘림 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: calc(72% + 10px);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 80px;
+}
+
+.hero-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(90px);
+  animation: noise 1s infinite linear;
+  transform: translate(-50%, -50%);
+}
+
+.hero_container {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero_heading {
+  color: var(--text-color);
+  font-size: 62px;
+  font-family: Colgent;
+  font-weight: normal;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.main_title {
+  font-family: Neue Montreal;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+/* Stroke BUTTON */
+.button_primary {
+  font-size: 16px;
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px auto;
+  font-family: Neue Montreal;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid;
+  border-radius: 20px;
+  gap: 8px;
+  padding: 20px 20px;
+}
+
+/* Filled BUTTON */
+.button_secondary {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px 0px;
+  font-family: Pretendard-Regular;
+  font-weight: 500;
+  border-radius: 100px;
+  color: #fff;
+  border: none;
+  background-color: var(--text-color);
+  padding: 14px 28px;
+}
+
+.icon-24 {
+  width: 18px;
+  height: 18px;
+}
+
+/* Project --------------------------------- */
+
+.project_container {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.project_section {
+  max-width: 1348px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.heading {
+  margin-right: 30px;
+}
+
+.heading h1 {
+  margin: auto;
+  font-size: 60px;
+  font-family: Colgent;
+  font-weight: normal;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project-keywords {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.project_des {
+  margin: 10px 0px 40px 0;
+}
+
+.project_title:first-child {
+  color: var(--text-color);
+  font-family: Neue Montreal, serif;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.project_des p {
+  font-family: Pretendard-Light;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.project_tag {
+  display: inline-block;
+  font-family: Neue Montreal;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  color: #969996;
+  padding: 8px 0px;
+}
+
+/* Branding --------------------------------- */
+.logo_section {
+  max-width: 1348px;
+  background-color: var(--background-color);
+  padding-bottom: 60px;
+  padding: 80px 20px;
+  margin: auto;
+}
+
+.logo_container {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.myLogos {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* hover 시에 밝기 어둡게 */
+.myLogos:hover {
+  filter: brightness(60%);
+  cursor: pointer;
+}
+
+.altCaption {
+  width: 70%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: #fff;
+  padding: 10px;
+  font-family: Pretendard-Light;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* hover시에 caption 글자 보이게 */
+.image-container:hover .altCaption {
+  opacity: 1;
+}
+
+/* Footer --------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 8rem 4rem;
+  background-color: #fff;
+  font-family: Neue Montreal;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+.social_link p {
+  cursor: pointer;
+  font-family: Colgent, Pretendard-Light;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+/* Animation --------------------------------- */
+
+/* Hero Fade */
+.top_fadeIn {
+  animation-name: example;
+  animation-duration: 2s;
+  position: relative;
+}
+
+@keyframes example {
+  0% {
+    opacity: 0;
+    top: -30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.bottom_fadeIn {
+  animation-name: example2;
+  animation-duration: 2s;
+  position: relative;
+  opacity: 0; /* 초기에 투명도를 0으로 설정 */
+  top: 30px; /* 초기에 상단으로 이동한 상태로 설정 */
+  animation-fill-mode: forwards; /* 애니메이션이 끝난 후 상태를 유지하도록 설정 */
+}
+
+.bottom_fadeIn:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.bottom_fadeIn:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.bottom_fadeIn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes example2 {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+/* Project Section 스크롤 Fade*/
+.scroll_fadeIn {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll_fadeIn.in-view {
+  opacity: 1;
+}
+
+/* Casestduy Button*/
+.casestudy_right {
+  display: flex;
+  justify-content: end;
+}
+
+.casestudy_left {
+  display: flex;
+  justify-content: start;
+}
+
+.casestudy_both {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next_casestudy {
+  width: 90%;
+  padding: 40px 0px;
+  margin: auto;
+}
+
+.next_casestudy button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  font-family: Neue Montreal, serif;
+  letter-spacing: 1%;
+}
+
+.next_casestudy button a {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Hover 시에 Stroke 색상 변경, Fill은 면 색상 */
+.next_casestudy a:hover,
+.next_casestudy a:hover path {
+  color: var(--accent-color);
+  stroke: var(--accent-color);
+}
+
+.arrow_left {
+  margin-right: 12px;
+}
+
+.arrow_right {
+  margin-left: 12px;
+}
+
+/*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
+
+@media screen and (max-width: 767px) {
+  /* Navbar --------------------------------- */
+
+  .nav_logo img {
+    width: 30px;
+  }
+
+  /* Hamburger Menu*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+  }
+
+  .nav_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    border-top: 1px solid var(--border1-color);
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .nav_menu.active {
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    padding: 120px;
+  }
+
+  .nav_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav_menu li a {
+    font-size: 18px;
+  }
+  .navbar_toggleBtn {
+    width: 34px;
+    height: 34px;
+    display: block;
+  }
+
+  .navbar_toggleBtn .line1,
+  .navbar_toggleBtn .line3 {
+    transition: transform 0.3s;
+    transform-origin: center;
+  }
+  .navbar_toggleBtn.active .line1 {
+    transform: rotate(45deg) translateY(11px) translateX(0px);
+  }
+
+  .navbar_toggleBtn.active .line3 {
+    transform: rotate(-45deg) translateY(-11px) translateX(0px);
+  }
+
+  .navbar_toggleBtn.active .line2 {
+    display: none;
+  }
+
+  /* Hero --------------------------------- */
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    background-size: 1200px;
+  }
+
+  .hero_container {
+    display: block;
+  }
+
+  .hero_heading {
+    font-size: 50px;
+  }
+
+  .main_title {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .main_title p {
+    margin: 30px 0px;
+  }
+
+  /* Project --------------------------------- */
+  .project_container {
+    display: block;
+  }
+
+  .project_section {
+    padding: 40px 16px;
+  }
+
+  .heading h1 {
+    font-size: 40px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  .project_title:first-child {
+    font-size: 18px;
+  }
+
+  /* Branding --------------------------------- */
+
+  .modal-content {
+    width: 80%;
+  }
+
+  .logo_section {
+    padding: 0px 16px;
+  }
+
+  .logo_container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer --------------------------------- */
+  .footer {
+    padding: 4rem 0rem;
+  }
+
+  .copyright {
+    margin: 2rem 0rem;
+  }
+
+  /* Project button ---------------------------*/
+  .next_casestudy button {
+    font-size: 24px;
+  }
+}

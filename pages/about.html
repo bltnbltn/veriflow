@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <title>Yura Lee | About</title>
+  <link rel="icon" href="../assets/img/logo/web_favicon.png">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="nav_logo">
+      <a href="../index.html">
+        <img src="../assets/img/logo/web.png" alt="">
+
+      </a>
+    </div>
+
+    <ul class="nav_menu">
+      <li><a onclick="clickSingleA(this)" class="single" href="../index.html">WORK</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="../pages/creation.html">PLAY</a></li>
+      <li><a onclick="clickSingleA(this)" class="single active" href="../pages/about.html">ABOUT</a></li>
+    </ul>
+
+    <svg class="navbar_toggleBtn" width="32" height="24" viewBox="0 0 32 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="line1" d="M0 1H32" stroke="black" />
+      <path class="line2" d="M0 12H32" stroke="black" />
+      <path class="line3" d="M0 23H32" stroke="black" />
+    </svg>
+  </nav>
+
+  <section class="about bottom_fadeIn">
+
+    <!-- <div class="about_img">
+      <img src="../assets/img/aboutme.jpg" alt="">
+    </div> -->
+
+    <div class="about_section about_title">
+      <p>근거 있는 디자인을 하는 디자이너 이유라입니다.<br>
+        작은 디테일까지 고민하여 사용자 경험을 최적화하고,<br>
+        효율을 고려하여 유의미한 UXUI 디자인을 하겠습니다.<br>
+      </p>
+
+    </div>
+    <div class="about_list">
+      <div class="enjoy">
+        <h2>I enjoy</h2>
+        <div class="emoji_flex">
+          <p style="font-size:24px">&#128373; <span>새로운 것을 배우는 걸 좋아해요</span></p>
+          <p style="font-size:24px">&#127926; <span>노래는 발라드를 즐겨 들어요</span></p>
+          <p style="font-size:24px">&#127929; <span>관심 가는 곡이 생기면 피아노 연주를 해요</span></p>
+          <p style="font-size:24px">&#128218; <span>최근 탤런트코드를 읽고있어요 </span></p>
+        </div>
+      </div>
+
+      <div class="tools">
+        <h2>Tools</h2>
+        <p><span>Figma</span></p>
+        <p><span>ProtoPie</span></p>
+        <p><span>Photoshop</span></p>
+        <p><span>Illustrator</span></p>
+        <p><span>After Effects</span></p>
+        <p><span>Premiere Pro</span></p>
+        <p><span>Final Cut</span></p>
+        <p><span>Visual Studio</span></p>
+      </div>
+
+      <div class="skills">
+        <h2>Skills</h2>
+        <p><span>UXUI Design</span></p>
+        <p><span>Wireframe</span></p>
+        <p><span>Prototype</span></p>
+        <p><span>Graphic Design</span></p>
+        <p><span>Motion Graphic</span></p>
+        <p><span>HTML5</span></p>
+        <p><span>CSS3</span></p>
+        <p><span>JavaScript</span></p>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="contactArrow">
+        <h2>GET IN TOUCH</h2>
+        <p class="arrow">↓</p>
+      </div> -->
+  </section>
+  <!-- 
+  <section class="container bottom_fadeIn">
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <h3>Let's chat!</h3>
+      <input type="text" id="name" placeholder="회사명 or 이름" required>
+      <input type="email" id="email" placeholder="이메일" required>
+      <input type="text" id="phone" placeholder="연락처" required>
+      <textarea type="message" rows="4" id="message" placeholder="내용을 입력하세요"></textarea>
+      <button type="submit">보내기</button>
+    </form>
+  </section> -->
+
+  <footer class="footer bottom_fadeIn">
+
+    <div class="social_link">
+      <p id="copyEmail">
+        yuralee3333@gmail.com
+      </p>
+    </div>
+
+    <div class="copyright">
+      <p>&copy 2025</p>
+    </div>
+  </footer>
+  </div>
+  <script src="../js/main.js"></script>
+  <script src="../js/form.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>

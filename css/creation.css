@@ -1,0 +1,125 @@
+.graphic_section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.graphic_section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  display: block;
+  transition: transform 4.5s ease; /* transform 속성에 대한 0.3초 동안의 전환 효과를 추가 */
+}
+
+/* Text Style */
+
+.creation_heading {
+  padding: 80px 0px;
+}
+
+.creation_heading h1 {
+  font-size: 60px;
+  margin: auto;
+  font-family: Colgent, serif;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+/* Graphic */
+
+.graphic_section {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-text-color);
+  color: var(--black-text-color);
+  text-align: center;
+  padding: 40px 40px 120px 40px;
+}
+
+.graphic_container {
+  max-width: 1020px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: auto;
+}
+
+.graphic {
+  width: 100%;
+  height: 380px;
+}
+
+/* Drawing */
+.drawing_section {
+  width: 100%;
+  height: 100%;
+  background-color: #10151b;
+  color: var(--white-text-color);
+  text-align: center;
+  padding: 40px 40px 120px 40px;
+}
+
+.drawing_container {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.drawing_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: auto;
+}
+
+.grid-item {
+  width: calc(33.33% - 16px); /* 기본적으로 3컬럼 */
+  margin-bottom: 16px;
+  padding: 6%;
+}
+
+/* Creation 이미지 한개씩 나타나기 */
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+.grid-item img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
+
+@media screen and (max-width: 767px) {
+  .graphic_section,
+  .drawing_section {
+    padding: 16px;
+  }
+
+  .graphic_container {
+    grid-template-columns: 1fr;
+  }
+  .creation_heading {
+    padding-bottom: 20px;
+  }
+
+  .creation_heading h1 {
+    font-size: 40px;
+  }
+
+  .grid-item {
+    width: calc(100%);
+    padding: 4% 10%;
+  }
+}

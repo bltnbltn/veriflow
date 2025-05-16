@@ -1,0 +1,188 @@
+/* !!!!!WEB text style!!!!! */
+.headline_web {
+  font-family: Ygro;
+  font-weight: normal;
+  font-size: 50px;
+  color: var(--text-color);
+}
+
+.title {
+  font-family: pretendard-Medium;
+  font-weight: 400;
+  font-size: 26px;
+  margin: 24px 0px;
+}
+
+.title_padding {
+  margin: 24px 110px;
+}
+
+.body_small {
+  font-size: 14px;
+  font-family: pretendard-Regular;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #8a8d97;
+}
+
+.body_medium {
+  font-family: pretendard-Light;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* !!!!! Structure !!!!! */
+
+.web_section {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 24px 20px;
+}
+
+/* Hero --------------------------------- */
+
+.web_hero {
+  height: 70vh;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.web_section img,
+.web_section_wide img {
+  width: 100%;
+}
+
+.web_hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overview --------------------------------- */
+
+.web_overview {
+  width: 100%;
+  height: auto;
+}
+
+.web_overview img {
+  width: 400px;
+}
+
+.overview_info {
+  display: flex;
+  width: 100%;
+  grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  gap: 60px;
+  padding: 24px 0px;
+}
+
+.overview_info ul {
+  font-family: pretendard-Light;
+  font-weight: 200;
+}
+
+.overview_info ul li:first-child {
+  font-family: pretendard-Medium;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Overview 긴 텍스트 비율 설정  */
+.long_overview {
+  width: 47%;
+}
+
+.color {
+  display: flex;
+  gap: 8px;
+}
+
+.color_palette1,
+.color_palette2,
+.color_palette3 {
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.color_palette1 {
+  background-color: #e48896;
+}
+.color_palette2 {
+  background-color: #903d52;
+}
+.color_palette3 {
+  background-color: #3b3b3b;
+}
+
+/* Project --------------------------------- */
+.web_img {
+  margin-bottom: 160px;
+}
+
+/*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
+
+@media screen and (max-width: 767px) {
+  /* !!!!!WEB text style!!!!! */
+
+  .headline_web {
+    font-size: 32px;
+  }
+
+  .title {
+    font-family: pretendard-Medium;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .title_padding {
+    margin: 24px 30px;
+  }
+
+  /* Hero ------------------------------------- */
+  .web_hero {
+    height: 40vh;
+    margin: auto;
+  }
+
+  /* Overview --------------------------------- */
+
+  .overview_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .web_overview img {
+    width: 240px;
+    height: auto;
+  }
+
+  .overview_info ul:nth-child(1) {
+    grid-column: 1 / 5; /* 첫 번째 행에 1개 가득 차도록 설정 */
+  }
+
+  .overview_info ul:nth-child(2),
+  .overview_info ul:nth-child(3),
+  .overview_info ul:nth-child(4),
+  .overview_info ul:nth-child(5) {
+    grid-column: span 2; /* 두 번째 행에 각 항목을 골고루 배치 */
+  }
+
+  .long_overview {
+    width: 100%;
+  }
+
+  /* Project --------------------------------- */
+
+  .web_img {
+    margin-bottom: 30px;
+  }
+}

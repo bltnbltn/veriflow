@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/rkj7hvy.css">
+  <title>Yura Lee</title>
+  <link rel="icon" href="./assets/img/logo/web_favicon.png" type="image/x-icon" sizes="16x16">
+</head>
+
+<body>
+  <nav class="navbar">
+
+    <div class="nav_logo">
+      <a href="./index.html">
+        <img src="./assets/img/logo/web.png" alt="">
+      </a>
+    </div>
+
+    <ul class="nav_menu">
+      <li><a onclick="clickSingleA(this)" class="single active" href="index.html">WORK</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="./pages/creation.html">PLAY</a></li>
+      <li><a onclick="clickSingleA(this)" class="single" href="./pages/about.html">ABOUT</a></li>
+    </ul>
+
+    <svg class="navbar_toggleBtn" width="32" height="24" viewBox="0 0 32 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path class="line1" d="M0 1H32" stroke="black" />
+      <path class="line2" d="M0 12H32" stroke="black" />
+      <path class="line3" d="M0 23H32" stroke="black" />
+    </svg>
+  </nav>
+
+  <section class="hero">
+    <video class="hero-background" autoplay loop muted playsinline>
+      <source src="./assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero_container bottom_fadeIn">
+      <h1 class="hero_heading"><span>have</span> curiosity<br><span>wonder </span>how<br><span>seek</span>
+        validity</h1>
+      <div class="main_title bottom_fadeIn ">
+        <p>UXUI Designer 이유라
+        </p>
+        <a href="#project" class="project_arrow button_primary">
+          <!-- <div>Projects</div> -->
+          <img class="icon-24" src="./assets/img/icon/arrow-down.svg" alt="">
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="project_section scroll_fadeIn" id="project">
+    <div class="heading bottom_fadeIn">
+      <h1>UXUI Design</h1>
+    </div>
+
+    <div class="project_container">
+      <div class="project">
+        <a href="./pages/casestudy_second.html">
+          <img src="./assets/img/project_second_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">7-Eleven</p>
+            <p>기존 편의점 앱의 재고찾기 서비스 개선</p>
+            <div class="project_tag">App</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="project">
+        <a href="./pages/casestudy_first.html">
+          <img src="./assets/img/project_first_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">Cirkle</p>
+            <p>소비기한 체크 및 AI레시피 활용 냉장고 관리 앱 디자인</p>
+            <div class="project_tag">App</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="project">
+        <a href="#" onclick="event.preventDefault();">
+          <img src="./assets/img/project_cv_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">CVnet</p>
+            <p>스마트 통합 월패드 디자인</p>
+            <div class="project_tag">Wallpad</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="project">
+        <a href="./pages/web_second.html">
+          <img src="./assets/img/project_fourth_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">Hateacake</p>
+            <p>온라인 케이크 판매 웹 디자인 및 퍼블리싱</p>
+            <div class="project_tag">Web</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="project">
+        <a href="./pages/web_steam.html">
+          <img src="./assets/img/project_steam_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">Steam</p>
+            <p>게임 플랫폼 웹 리디자인 및 퍼블리싱
+            <div class="project_tag">Web</div>
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="project">
+        <a href="./pages/Web_first.html">
+          <img src="./assets/img/project_third_cover.jpg">
+          <div class="project_des">
+            <p class="project_title">에스티로더</p>
+            <p>화장품 브랜드 공식몰 리디자인</p>
+            <div class="project_tag">Web</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="logo_section scroll_fadeIn">
+    <div class="heading bottom_fadeIn">
+      <h1>Logo Design</h1>
+    </div>
+    <div class="logo_container bottom_fadeIn">
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_1.jpg" alt="아로마테라피 샵">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_2.jpg" alt="인테리어 플랫폼">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_3.jpg" alt="여성 패션 브랜드">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_6.jpg" alt="수제 꽃 판매점">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_4.jpg" alt="아동 패션 브랜드">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_5.jpg" alt="해충박멸 제품 브랜드">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_7.jpg" alt="프리토 레스토랑">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_8.jpg" alt="수영복 브랜드">
+        <div class="altCaption"></div>
+      </div>
+      <div class="image-container">
+        <img class="myLogos" id="myImg" src="./assets/img/branding/logo_9.jpg" alt="애견용품 브랜드">
+        <div class="altCaption"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+    <!-- Modal Caption (Image Text)-->
+    <div id="caption"></div>
+  </div>
+
+  <footer class="footer bottom_fadeIn">
+
+    <div class="social_link">
+      <p id="copyEmail">
+        yuralee3333@gmail.com
+      </p>
+    </div>
+
+    <div class="copyright">
+      <p>&copy 2025</p>
+    </div>
+  </footer>
+  <script src="./js/animation.js"></script>
+  <script defer src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>
