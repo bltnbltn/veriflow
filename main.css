@@ -68,7 +68,7 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 100px;
   padding: 40px;
   background-color: transparent;
   position: fixed; /* 상단 고정 */
@@ -79,8 +79,8 @@ a {
 }
 
 .nav_logo {
-  width: 68px;
-  height: 68px;
+  width: 80px;
+  height: 80px;
 }
 
 .nav_logo a {
@@ -106,21 +106,12 @@ a {
 }
 
 .nav_menu li a {
-  font-size: 16px;
+  font-size: 18px;
   font-family: Neue Montreal;
   letter-spacing: 0.5px;
-  color: rgba(48, 46, 46, 0.5);
   text-decoration: none;
   padding: 8px 22px;
   transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
-}
-
-.nav_menu li a:hover {
-  color: var(--text-color);
-}
-
-.nav_menu a.active {
-  color: var(--text-color);
 }
 
 .web,
@@ -141,7 +132,7 @@ a {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* 부모 요소 높이를 화면 높이로 설정 */
+  height: 400px; /* 부모 요소 높이를 화면 높이로 설정 */
   overflow: hidden; /* 블러가 부모 영역을 넘지 않게 잘림 */
   display: flex;
   justify-content: center;
@@ -310,8 +301,8 @@ a {
   width: 100%;
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .myLogos {
@@ -575,7 +566,7 @@ a {
   }
 
   .hero_heading {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .main_title {
@@ -597,7 +588,7 @@ a {
   }
 
   .heading h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin-right: 0;
     margin-bottom: 24px;
   }
@@ -613,7 +604,7 @@ a {
   }
 
   .logo_section {
-    padding: 0px 16px;
+    padding: 40px 16px;
   }
 
   .logo_container {
