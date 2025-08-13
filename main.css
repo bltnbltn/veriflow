@@ -126,7 +126,7 @@ a {
   background-size: calc(72% + 10px);
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 120px;
+  margin-bottom: 40px;
 }
 
 .hero-background {
@@ -506,7 +506,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
     background-size: 1200px;
   }
 
