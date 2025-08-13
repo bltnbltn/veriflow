@@ -126,7 +126,7 @@ a {
   background-size: calc(72% + 10px);
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 .hero-background {
@@ -187,7 +187,7 @@ a {
 .project_container {
   width: 100%;
   display: grid;
-  gap: 14px;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -506,12 +506,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     background-size: 1200px;
   }
 
   .hero_container {
     display: block;
+  }
+
+  .hero_heading h1 {
+    font-size: 36px;
   }
 
   .main_title {
@@ -524,12 +528,13 @@ a {
   }
 
   /* Project --------------------------------- */
-  .project_container {
-    display: block;
-  }
 
   .project_section {
     padding: 40px 16px;
+  }
+
+  .project_container {
+    display: block;
   }
 
   .project_title:first-child {
@@ -552,6 +557,7 @@ a {
     justify-content: center;
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   /* Footer --------------------------------- */
