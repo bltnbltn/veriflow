@@ -99,11 +99,6 @@ a {
   transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
 }
 
-.web,
-.casestudy {
-  padding-top: 80px;
-}
-
 /* Hamburger Menu 숨기기*/
 
 .navbar_toggleBtn {
@@ -126,7 +121,7 @@ a {
   background-size: calc(72% + 10px);
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .hero-background {
@@ -506,30 +501,27 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 1200px;
+    height: 100dvh;
   }
 
   .hero_container {
     display: block;
+    padding: 0px 16px;
   }
 
   .hero_heading h1 {
-    font-size: 36px;
+    font-size: 30px;
   }
 
-  .main_title {
-    margin: 0;
-    font-size: 18px;
-  }
-
-  .main_title p {
-    margin: 30px 0px;
+  .main_title h1 {
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   /* Project --------------------------------- */
 
   .project_section {
-    padding: 40px 16px;
+    padding: 16px;
   }
 
   .project_container {
@@ -547,7 +539,7 @@ a {
   }
 
   .logo_section {
-    padding: 40px 16px;
+    padding: 16px;
   }
 
   .logo_container {
