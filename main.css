@@ -49,22 +49,21 @@ a {
   background-color: var(--accent-color);
   border: none;
   border-radius: 30px;
-  padding: 12px 16px;
+  padding: 12px 20px;
 }
 
 .button_secondary {
   font-size: 14px;
   cursor: pointer;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0px;
   font-family: Pretendard-Regular;
   font-weight: 500;
   border-radius: 100px;
-  color: var(--black-color); /* 글자는 불투명 유지 */
-  border: 1px solid rgba(0, 0, 0, 0.2); /* 테두리 살짝 투명 */
-  background-color: transparent;
-  padding: 14px 28px;
-  transition: 0.3s;
+  color: var(--black-color);
+  border: 1px solid #e0e5e3;
+  background-color: #ebedec;
+  padding: 12px 20px;
 }
 
 /* Navbar --------------------------------- */
@@ -164,8 +163,17 @@ a {
   font-size: 60px;
   font-family: Colgent;
   font-weight: normal;
-  color: var(--black-color);
   margin-bottom: 30px;
+
+  /* 텍스트 그라데이션 */
+  background: linear-gradient(
+    90deg,
+    rgb(24, 25, 25) 0%,
+    rgba(14, 15, 15, 0.8) 50%,
+    rgb(24, 25, 25) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero_heading p {
