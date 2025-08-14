@@ -26,31 +26,31 @@ window.addEventListener('scroll', function () {
 });
 
 // 버튼 클릭 시 이동하는 스크롤
-document.addEventListener('DOMContentLoaded', function () {
-  var buttonLink = document.querySelector('.button_primary');
-  if (buttonLink) {
-    buttonLink.addEventListener('click', function (e) {
-      e.preventDefault(); // 기본 동작인 페이지 이동 방지
+// document.addEventListener('DOMContentLoaded', function () {
+//   var buttonLink = document.querySelector('.button_move');
+//   if (buttonLink) {
+//     buttonLink.addEventListener('click', function (e) {
+//       e.preventDefault(); // 기본 동작인 페이지 이동 방지
 
-      var target = document.querySelector('#project'); // 목표 div
+//       var target = document.querySelector('#project'); // 목표 div
 
-      var isMobile = window.innerWidth <= 768; // 화면 크기가 768px 이하이면 모바일로 간주
-      var navbarHeight = document.querySelector('.navbar')
-        ? document.querySelector('.navbar').offsetHeight
-        : 0; // 네비게이션 바 높이 가져오기
+//       var isMobile = window.innerWidth <= 768; // 화면 크기가 768px 이하이면 모바일로 간주
+//       var navbarHeight = document.querySelector('.navbar')
+//         ? document.querySelector('.navbar').offsetHeight
+//         : 0; // 네비게이션 바 높이 가져오기
 
-      var offset = isMobile ? navbarHeight - 10 : 0; // 모바일에서만 상단 조정
+//       var offset = isMobile ? navbarHeight - 10 : 0; // 모바일에서만 상단 조정
 
-      var targetTop = target.getBoundingClientRect().top + window.pageYOffset; // #project의 실제 화면 위치
+//       var targetTop = target.getBoundingClientRect().top + window.pageYOffset; // #project의 실제 화면 위치
 
-      // 부드럽게 스크롤 이동
-      window.scrollTo({
-        top: targetTop - offset,
-        behavior: 'smooth',
-      });
-    });
-  }
-});
+//       // 부드럽게 스크롤 이동
+//       window.scrollTo({
+//         top: targetTop - offset,
+//         behavior: 'smooth',
+//       });
+//     });
+//   }
+// });
 
 // Footer text effect
 document.getElementById('copyEmail').addEventListener('click', function () {
