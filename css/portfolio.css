@@ -1,0 +1,46 @@
+.top_main_title {
+  margin-top: 40px;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 32px; /* 메뉴 간격 */
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.tab-btn {
+  font-family: Pretendard-Regular;
+  font-size: 20px;
+  padding: 8px 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  color: var(--gray-color); /* 비활성 글자 색 */
+}
+
+.tab-btn.active {
+  color: var(--black-color); /* 활성 글자 색 */
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black-color);
+  transition: width 0.3s ease;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}

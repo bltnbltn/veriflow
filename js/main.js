@@ -105,24 +105,24 @@ function smoothTextChange(element, newText, speed) {
   }, speed * 1000); // speed에 맞게 시간 설정 (초 단위)
 }
 
-// Pinterest Grid image
-document.addEventListener('DOMContentLoaded', function () {
-  var grid = document.querySelector('.drawing_grid');
+// Portfolio Tab Menu
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-  imagesLoaded(grid, function () {
-    new Masonry(grid, {
-      itemSelector: '.grid-item',
-      percentPosition: true, //
-      gutter: 16,
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-tab');
+
+    // 버튼 active 클래스 변경
+    tabButtons.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // 콘텐츠 active 클래스 변경
+    tabContents.forEach((content) => {
+      content.classList.remove('active');
+      if (content.id === target) {
+        content.classList.add('active');
+      }
     });
   });
 });
-
-function setVh() {
-  document.documentElement.style.setProperty(
-    '--vh',
-    `${window.innerHeight * 0.01}px`
-  );
-}
-setVh();
-window.addEventListener('resize', setVh);

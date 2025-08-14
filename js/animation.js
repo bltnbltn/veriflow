@@ -21,23 +21,3 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Creation 이미지 한개씩 나타나기
-
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('.grid-item img');
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.5 }
-  ); // 50% 보일 때 작동
-
-  images.forEach((img) => {
-    observer.observe(img);
-  });
-});
