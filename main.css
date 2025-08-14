@@ -194,6 +194,10 @@ a {
   text-align: center;
 }
 
+.top_main_title {
+  margin-top: 40px;
+}
+
 /* Project --------------------------------- */
 
 .project_section {
