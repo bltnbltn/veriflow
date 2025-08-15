@@ -1,14 +1,12 @@
 /* !!!!!WEB text style!!!!! */
 .headline_web {
-  font-family: Ygro;
-  font-weight: normal;
+  font-family: Pretendard-Regular;
   font-size: 50px;
   color: var(--black-color);
 }
 
 .title {
   font-family: pretendard-Medium;
-  font-weight: 400;
   font-size: 26px;
   margin: 24px 0px;
 }
@@ -20,14 +18,12 @@
 .body_small {
   font-size: 14px;
   font-family: pretendard-Regular;
-  font-weight: 300;
   line-height: 1.5;
   color: #8a8d97;
 }
 
 .body_medium {
   font-family: pretendard-Light;
-  font-weight: 200;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -43,8 +39,12 @@
 
 /* Hero --------------------------------- */
 
+.web {
+  margin-top: 80px;
+}
+
 .web_hero {
-  height: 70vh;
+  height: 60vh;
   margin: auto;
   margin-bottom: 24px;
 }
@@ -83,12 +83,11 @@
 
 .overview_info ul {
   font-family: pretendard-Light;
-  font-weight: 200;
 }
 
 .overview_info ul li:first-child {
   font-family: pretendard-Medium;
-  font-weight: 500;
+
   margin-bottom: 12px;
 }
 
@@ -136,7 +135,6 @@
 
   .title {
     font-family: pretendard-Medium;
-    font-weight: 400;
     font-size: 18px;
   }
 

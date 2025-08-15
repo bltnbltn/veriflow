@@ -7,37 +7,40 @@
 /* TEXT STYLE */
 .headline {
   font-family: Colgent, serif;
-  font-weight: 600;
   font-size: 50px;
   color: #c9cbcd;
 }
 
 .title {
-  font-family: pretendard-Medium;
-  font-weight: 400;
+  font-family: Pretendard-Medium;
   font-size: 26px;
 }
 
 .subtitle {
   font-size: 16px;
-  font-family: pretendard-SemiBold;
-  font-weight: 500;
+  font-family: Pretendard-SemiBold;
   margin: 4px 0px 12px 0px;
 }
 
 .body_small {
   font-size: 14px;
-  font-family: pretendard-Regular;
-  font-weight: 300;
+  font-family: Pretendard-Regular;
   line-height: 1.5;
   color: #8a8d97;
 }
 
 .body_medium {
-  font-family: pretendard-Light;
-  font-weight: 200;
+  font-family: Pretendard-Light;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.semibold {
+  font-family: Pretendard-SemiBold;
+}
+
+.bold {
+  font-family: Pretendard-Bold;
 }
 
 .numbered_list {
@@ -84,18 +87,9 @@ video {
   background-color: #fff;
 }
 
-.semibold {
-  font-family: pretendard-SemiBold;
-  font-weight: 500;
-}
-
-.bold {
-  font-family: pretendard-Bold;
-  font-weight: 600;
-}
-
 .casestudy {
   color: var(--black-color);
+  margin-top: 80px;
 }
 
 .casestudy_first_hero,
@@ -129,14 +123,12 @@ video {
 }
 
 .overview_info ul {
-  font-family: pretendard-Light;
-  font-weight: 200;
+  font-family: Pretendard-Light;
   padding: 0px;
 }
 
 .overview_info ul li:first-child {
-  font-family: pretendard-Medium;
-  font-weight: 500;
+  font-family: Pretendard-Medium;
   margin-bottom: 8px;
 }
 
@@ -181,11 +173,11 @@ video {
   }
 
   .casestudy_first_hero img {
-    content: url(../assets/img/project_first_cover.jpg);
+    content: url(../assets/img/uiux/project_first_cover.jpg);
   }
 
   .casestudy_second_hero img {
-    content: url(../assets/img/project_second_cover.jpg);
+    content: url(../assets/img/uiux/project_second_cover.jpg);
   }
 
   .casestudy_section .body_medium {
@@ -193,7 +185,7 @@ video {
   }
 
   .phone_size {
-    content: url(../assets/img/user_benefit_phone.jpg);
+    content: url(../assets/img/uiux/user_benefit_phone.jpg);
   }
 
   .overview_wrapper {
@@ -207,10 +199,6 @@ video {
     width: 100%;
     padding-top: 16px;
     margin: 0;
-  }
-
-  .navbar {
-    background-color: #fff;
   }
 
   video {
