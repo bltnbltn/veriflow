@@ -105,24 +105,53 @@ function smoothTextChange(element, newText, speed) {
   }, speed * 1000); // speed에 맞게 시간 설정 (초 단위)
 }
 
-// Portfolio Tab Menu
+// 탭 버튼과 콘텐츠 선택
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
+// 탭 활성화 함수
+function activateTab(tabName) {
+  // 버튼
+  tabButtons.forEach((btn) => btn.classList.remove('active'));
+  const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+  if (targetBtn) targetBtn.classList.add('active');
+
+  // 콘텐츠
+  tabContents.forEach((content) => {
+    content.classList.remove('active');
+    if (content.id === tabName) content.classList.add('active');
+  });
+}
+
+// 탭 버튼 클릭
 tabButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    const target = btn.getAttribute('data-tab');
-
-    // 버튼 active 클래스 변경
-    tabButtons.forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    // 콘텐츠 active 클래스 변경
-    tabContents.forEach((content) => {
-      content.classList.remove('active');
-      if (content.id === target) {
-        content.classList.add('active');
-      }
-    });
+    const tabName = btn.dataset.tab;
+    activateTab(tabName);
+    sessionStorage.setItem('activePortfolioTab', tabName); // 유지
+    window.scrollTo(0, 0); // 항상 최상단
   });
+});
+
+// 카드 클릭 시 portfolio.html 이동 + 탭 지정
+const portfolioLinks = document.querySelectorAll('.portfolio-link');
+portfolioLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tabName = link.dataset.tab;
+    sessionStorage.setItem('activePortfolioTab', tabName);
+    window.location.href = link.href;
+  });
+});
+
+// 페이지 로드 시 세션 기반 탭 활성화 & 최상단
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTab = sessionStorage.getItem('activePortfolioTab');
+  if (savedTab) {
+    activateTab(savedTab);
+    setTimeout(() => window.scrollTo(0, 0), 1);
+    sessionStorage.removeItem('activePortfolioTab');
+  } else {
+    activateTab('uiux'); // 기본 탭
+  }
 });
