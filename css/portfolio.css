@@ -146,6 +146,6 @@
     justify-content: center;
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 10px;
   }
 }
