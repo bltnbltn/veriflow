@@ -1,0 +1,72 @@
+/* Contact Form --------------------------------- */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Pretendard-Regular;
+  background: #e8ebe9;
+  border-top: 0.5px solid #d6e9d9;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px;
+  margin: 60px 0;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px; /* 아래 여백 */
+}
+
+.field input {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 20px;
+  margin: 10px 0; /* 위아래 여백 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.field input:focus {
+  border: 2px solid var(--accent-color);
+}
+
+input[type='submit'] {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+#message {
+  width: 100%;
+  height: 200px; /* 원하면 더 높게 가능 */
+  padding: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  resize: vertical; /* 사용자가 높이 조절 가능 */
+  white-space: pre-wrap; /* 줄바꿈 문자와 자동 줄바꿈 모두 적용 */
+  overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+  text-align: left; /* 왼쪽 정렬 */
+  box-sizing: border-box; /* padding 포함 너비 계산 */
+  line-height: 150%;
+}

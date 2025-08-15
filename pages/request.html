@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="../css/request.css">
+
   <link rel="stylesheet" href="https://use.typekit.net/rkj7hvy.css">
   <title>베리플로우</title>
   <link rel="icon" href="./assets/img/logo/web_fav.png" type="image/x-icon" sizes="16x16">
@@ -42,6 +44,34 @@
 
   </section>
 
+  <section class="container top_fadeIn">
+    <form id="form">
+      <div class="field">
+        <label for="name">성함/회사명</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="field">
+        <label for="email">이메일</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="field">
+        <label for="time">연락처</label>
+        <input type="text" name="phone" id="phone">
+      </div>
+      <div class="field">
+        <label for="message">문의 내용</label>
+        <textarea type="text" name="message" id="message"></textarea>
+      </div>
+
+      <input type="submit" id="button" value="Send Email">
+    </form>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('IdQkMq8KHuJBil0pc')
+    </script>
+  </section>
 
   <footer class="footer bottom_fadeIn">
 
@@ -56,9 +86,10 @@
     </div>
   </footer>
 
-  <script src="../js/animation.js"></script>
   <script defer src="../js/main.js"></script>
-  <script src="../js/modal.js"></script>
+  <script src="../js/form.js"></script>
+
+
 </body>
 
 </html>
