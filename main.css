@@ -52,7 +52,7 @@ a {
   margin-bottom: 30px;
 }
 
-.title-medium {
+.title-lg {
   font-family: Pretendard-Light;
   margin: auto;
   font-size: 80px;
@@ -62,7 +62,7 @@ a {
   text-align: center;
 }
 
-.title-small {
+.title-sm {
   color: var(--black-color);
   font-family: Pretendard-Regular, serif;
   font-weight: 400;
@@ -70,7 +70,7 @@ a {
   margin-bottom: 6px;
 }
 
-.body-medium {
+.body-md {
   font-family: Pretendard-Regular;
   font-size: 24px;
   letter-spacing: -0.01em;
@@ -78,14 +78,14 @@ a {
   margin-top: 30px;
 }
 
-.body-small {
+.body-sm {
   font-family: Pretendard-Light;
   color: var(--black-color);
   font-size: 16px;
   line-height: 1.4;
 }
 
-.label-small {
+.label-sm {
   display: inline-block;
   font-family: Pretendard-Light;
   letter-spacing: 0.5px;
@@ -357,7 +357,7 @@ a {
 
 .bottom_fadeIn {
   animation-name: example2;
-  animation-duration: 2s;
+  animation-duration: 1s;
   position: relative;
   opacity: 0; /* 초기에 투명도를 0으로 설정 */
   top: 30px; /* 초기에 상단으로 이동한 상태로 설정 */
@@ -365,13 +365,13 @@ a {
 }
 
 .bottom_fadeIn:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .bottom_fadeIn:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .bottom_fadeIn:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 
 @keyframes example2 {
@@ -460,11 +460,11 @@ a {
     font-size: 30px;
   }
 
-  .title-medium {
-    font-size: 24px;
+  .title-lg {
+    font-size: 40px;
   }
 
-  .body-medium {
+  .body-md {
     font-size: 20px;
   }
 
