@@ -7,7 +7,7 @@
 
 .tab-btn {
   font-family: Pretendard-Regular;
-  font-size: 24px;
+  font-size: 20px;
   padding: 8px 0;
   border: none;
   background: none;
@@ -39,4 +39,19 @@
 
 .tab-content.active {
   display: block;
+}
+
+/*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
+
+@media screen and (max-width: 767px) {
+  .tab-menu {
+    display: flex;
+    gap: 32px; /* 메뉴 간격 */
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+
+  .tab-btn {
+    font-size: 18px;
+  }
 }

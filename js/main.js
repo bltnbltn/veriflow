@@ -54,7 +54,7 @@ window.addEventListener('scroll', function () {
 
 // Footer text effect
 document.getElementById('copyEmail').addEventListener('click', function () {
-  const emailToCopy = 'yuralee3333@gmail.com'; // 복사할 이메일 주소 설정
+  const emailToCopy = 'veriflow.design@gmail.com'; // 복사할 이메일 주소 설정
 
   // 복사할 텍스트를 임시 textarea에 넣어 클립보드에 복사
   const tempTextarea = document.createElement('textarea');
@@ -86,7 +86,7 @@ copyEmailElement.addEventListener('mouseenter', function () {
 
 copyEmailElement.addEventListener('mouseleave', function () {
   if (this.textContent !== '복사 완료!') {
-    smoothTextChange(this, 'yuralee3333@gmail.com', 0.2); // 빠르게 사라짐
+    smoothTextChange(this, 'veriflow.design@gmail.com', 0.2); // 빠르게 사라짐
   }
 });
 

@@ -42,6 +42,58 @@ a {
   text-decoration: none;
 }
 
+/* Typography --------------------------------- */
+
+.heading-1 {
+  font-family: Colgent;
+  margin: auto;
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.title-medium {
+  font-family: Pretendard-Light;
+  margin: auto;
+  font-size: 80px;
+  font-weight: normal;
+  color: var(--black-color);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.title-small {
+  color: var(--black-color);
+  font-family: Pretendard-Regular, serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.body-medium {
+  font-family: Pretendard-Regular;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--black-color);
+  margin-top: 30px;
+}
+
+.body-small {
+  font-family: Pretendard-Light;
+  color: var(--black-color);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.label-small {
+  display: inline-block;
+  font-family: Pretendard-Light;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  color: var(--gray-color);
+  padding: 4px 0px;
+}
+
 /* Buttons --------------------------------- */
 
 .button_primary {
@@ -126,7 +178,7 @@ a {
 .hero {
   position: relative;
   width: 100%;
-  height: 800px; /* 부모 요소 높이를 화면 높이로 설정 */
+  height: 700px; /* 부모 요소 높이를 화면 높이로 설정 */
   overflow: hidden; /* 블러가 부모 영역을 넘지 않게 잘림 */
   display: flex;
   justify-content: center;
@@ -158,13 +210,7 @@ a {
   flex-direction: column;
 }
 
-.hero_heading h1 {
-  margin: auto;
-  font-size: 60px;
-  font-family: Colgent;
-  font-weight: normal;
-  margin-bottom: 30px;
-
+.hero .heading-1 {
   /* 텍스트 그라데이션 */
   background: linear-gradient(
     90deg,
@@ -174,24 +220,6 @@ a {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hero_heading p {
-  font-family: Pretendard-Regular;
-  font-size: 24px;
-  letter-spacing: -0.01em;
-  color: var(--black-color);
-  margin-top: 30px;
-}
-
-.main_title h1 {
-  margin: auto;
-  font-size: 40px;
-  font-family: Colgent;
-  font-weight: normal;
-  color: var(--black-color);
-  margin-bottom: 40px;
-  text-align: center;
 }
 
 .top_main_title {
@@ -226,31 +254,6 @@ a {
 
 .project_des {
   margin: 10px 0px 40px 0;
-}
-
-.project_title:first-child {
-  color: var(--black-color);
-  font-family: Pretendard-Regular, serif;
-
-  font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-
-.project_des p {
-  font-family: Pretendard-Light;
-  color: var(--black-color);
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.project_tag {
-  display: inline-block;
-  font-family: Pretendard;
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  color: var(--gray-color);
-  padding: 8px 0px;
 }
 
 /* Branding --------------------------------- */
@@ -452,6 +455,19 @@ a {
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
 @media screen and (max-width: 767px) {
+  /* Typography --------------------------------- */
+  .heading-1 {
+    font-size: 30px;
+  }
+
+  .title-medium {
+    font-size: 24px;
+  }
+
+  .body-medium {
+    font-size: 20px;
+  }
+
   /* Navbar --------------------------------- */
 
   .nav_logo img {
@@ -499,6 +515,7 @@ a {
   .nav_menu li a {
     font-size: 18px;
   }
+
   .navbar_toggleBtn {
     width: 34px;
     height: 34px;
@@ -528,7 +545,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 67vh;
+    margin-bottom: 24px;
   }
 
   .hero_container {
@@ -536,13 +554,8 @@ a {
     padding: 0px 16px;
   }
 
-  .hero_heading h1 {
-    font-size: 30px;
-  }
-
-  .main_title h1 {
-    text-align: left;
-    margin-bottom: 20px;
+  .top_main_title {
+    margin-top: 80px;
   }
 
   /* Project --------------------------------- */
@@ -553,10 +566,6 @@ a {
 
   .project_container {
     display: block;
-  }
-
-  .project_title:first-child {
-    font-size: 18px;
   }
 
   /* Branding --------------------------------- */
