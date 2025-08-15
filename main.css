@@ -108,7 +108,7 @@ a {
   padding: 4px 8px;
   border-radius: 10px;
   background-color: #e7eae7;
-  margin-top: 14px;
+  margin: 14px 0px;
 }
 
 /* Buttons --------------------------------- */
@@ -279,12 +279,19 @@ a {
 
 .img-text {
   position: absolute;
-  top: 6%;
-  left: 8%;
+  top: 4%;
+  left: 4%;
   color: var(--white-text-color);
-  font-size: 30px;
+  font-size: 28px;
   font-family: Pretendard-Light;
   z-index: 2;
+
+  /* 유리 효과 */
+  background: rgba(0, 0, 0, 0.1); /* 흰색 반투명 */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari 호환 */
+  padding: 6px 12px;
+  border-radius: 30px;
 }
 
 /* Footer --------------------------------- */
@@ -437,6 +444,10 @@ a {
 
   .work-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-text {
+    font-size: 16px;
   }
 
   /* Navbar --------------------------------- */
