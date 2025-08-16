@@ -1,22 +1,14 @@
 /* Contact Form --------------------------------- */
 
-.request-section {
-  margin: auto;
+.request-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  font-family: Pretendard-Regular;
   background: url('../assets/img/background.png') no-repeat center center;
   background-size: cover;
-  height: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.request-container {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  gap: 60px;
-  justify-content: center;
-  font-family: Pretendard-Regular;
+  padding: 180px 30px;
 }
 
 form {
@@ -27,15 +19,15 @@ form {
   padding: 40px 60px;
 
   /* 유리 효과 */
-  background: rgba(255, 255, 255, 0.2); /* 반투명 흰색 */
+  background: rgba(223, 222, 222, 0.4); /* 반투명 흰색 */
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(8px); /* 사파리 대응 */
 
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3); /* 경계 살짝 */
   box-sizing: border-box;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1),
-    /* 기본 그림자 */ 0 8px 40px rgba(0, 0, 0, 0.05); /* 부드럽게 퍼지는 그림자 */
+    /* 기본 그림자 */ 0 8px 40px rgba(0, 0, 0, 0.01); /* 부드럽게 퍼지는 그림자 */
 }
 
 .field {
@@ -51,7 +43,7 @@ form {
   padding: 16px;
   margin: 8px 0;
   border: 1px solid rgba(255, 255, 255, 0.3); /* 경계 살짝 */
-  border-radius: 4px;
+  border-radius: 8px;
 
   /* 유리 효과 */
   background: rgba(255, 255, 255, 0.2);
@@ -70,12 +62,12 @@ input[type='submit'] {
   font-family: Pretendard-Regular;
   width: 100%;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 18px;
   color: var(--white-text-color);
   background: var(--accent-color);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   outline: none;
 }
@@ -100,14 +92,14 @@ input[type='submit'] {
 @media screen and (max-width: 767px) {
   .request-container {
     width: 100%;
-    padding: 40px 20px;
     flex-direction: column;
     align-items: center;
+    padding: 16px 20px 40px 20px;
     gap: 30px;
   }
 
   form {
-    padding: 16px;
+    padding: 20px;
     width: 100%;
   }
 
