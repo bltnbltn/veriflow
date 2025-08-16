@@ -8,14 +8,56 @@
 }
 
 .card {
+  position: relative;
   width: 100%;
-  height: 400px;
   padding: 40px;
   border: 1px solid rgb(229, 231, 230);
   border-radius: 14px;
 }
 
+.card-badge {
+  font-family: Pretendard-Medium;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: rgb(228, 246, 228);
+  color: var(--accent-color);
+  padding: 6px 12px;
+  border-bottom-right-radius: 6px; /* 카드 모서리랑 동일하게 둥글게 */
+  border-bottom-left-radius: 6px; /* 책갈피 느낌 */
+}
+
+.card-headline {
+  display: flex;
+}
+
+.card-des {
+  border-top: 1px solid rgba(83, 83, 83, 0.1); /* 흐린 회색 선 */
+  padding-top: 16px; /* 선과 내용 사이 여백 */
+  margin-top: 16px; /* 카드 타이틀과 간격 */
+}
+
+.card-des li {
+  padding: 1px;
+}
+
 .des-title {
   font-family: Pretendard-SemiBold;
-  padding: 24px 0px;
+  padding-bottom: 20px;
+}
+
+.caption {
+  text-align: right;
+  padding: 6px;
+  color: var(--gray-color);
+}
+
+/*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
+
+@media screen and (max-width: 767px) {
+  .service-guide-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
