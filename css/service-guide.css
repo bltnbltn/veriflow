@@ -1,0 +1,10 @@
+.service-guide-container {
+  display: flex;
+    gap: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(238, 239, 238);
+}

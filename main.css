@@ -73,52 +73,55 @@ a {
 
 /* Typography --------------------------------- */
 
+.section-title {
+  text-align: center;
+  padding: 30px;
+}
+
 .heading-1 {
   font-family: Colgent;
-  margin: auto;
   font-size: 50px;
-  font-weight: normal;
+  margin: auto;
   margin-bottom: 30px;
 }
 
 .title-lg {
   font-family: Pretendard-Light;
-  margin: auto;
   font-size: 70px;
-  font-weight: normal;
+  letter-spacing: -0.01em;
+  margin: auto;
   color: var(--black-color);
-  padding: 40px;
+  padding: 30px;
   text-align: center;
 }
 
 .title-sm {
-  color: var(--black-color);
-  font-family: Pretendard-Regular, serif;
-  font-weight: 400;
+  font-family: Pretendard-Regular;
   font-size: 18px;
+  color: var(--black-color);
   margin: 8px 0px;
+  line-height: 1.4;
 }
 
 .body-md {
-  font-family: Pretendard-Regular;
+  font-family: Pretendard-Light;
   font-size: 24px;
   letter-spacing: -0.01em;
   color: var(--black-color);
-  margin-top: 30px;
 }
 
 .body-sm {
   font-family: Pretendard-Light;
-  color: var(--dark-gray-color);
   font-size: 16px;
+  color: var(--dark-gray-color);
   line-height: 1.4;
 }
 
 .label-sm {
-  display: inline-block;
   font-family: Pretendard-Light;
-  letter-spacing: 0.5px;
   font-size: 12px;
+  display: inline-block;
+  letter-spacing: 0.5px;
   color: var(--dark-gray-color);
   padding: 4px 8px;
   border-radius: 30px;
@@ -294,13 +297,11 @@ a {
   border-radius: 12px;
 }
 
-.img-text {
+.label-overlay {
   position: absolute;
   top: 4%;
   left: 4%;
   color: var(--white-text-color);
-  font-size: 24px;
-  font-family: Pretendard-Light;
   z-index: 2;
 
   /* 유리 효과 */
@@ -462,10 +463,6 @@ a {
   .work-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-  }
-
-  .img-text {
-    font-size: 16px;
   }
 
   /* Navbar --------------------------------- */

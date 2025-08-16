@@ -37,40 +37,43 @@
     </svg>
   </nav>
 
-  <section class="project_section bottom_fadeIn">
-    <div class="section_title top_main_title">
-      <h1 class="title-lg">Design Request</h1>
+  <section class="request-section bottom_fadeIn">
+
+    <div class="request-container bottom_fadeIn">
+      <div class="section-title">
+        <h1 class="title-lg">Design Request</h1>
+        <h1 class="title-sm">프로젝트에 대해 간단히 작성해주시면, <br>24시간 내로 연락드리겠습니다.</h1>
+      </div>
+      <form id="form">
+
+        <div class="field">
+          <label for="name">성함/회사명</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input type="text" name="email" id="email">
+        </div>
+        <div class="field">
+          <label for="time">연락처</label>
+          <input type="text" name="phone" id="phone">
+        </div>
+        <div class="field">
+          <label for="message">문의 내용</label>
+          <textarea type="text" name="message" id="message"></textarea>
+        </div>
+
+        <input type="submit" id="button" value="이메일 전송">
+      </form>
+
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+      <script type="text/javascript">
+        emailjs.init('IdQkMq8KHuJBil0pc')
+      </script>
     </div>
   </section>
 
-  <section class="container bottom_fadeIn">
-    <form id="form">
-      <div class="field">
-        <label for="name">성함/회사명</label>
-        <input type="text" name="name" id="name">
-      </div>
-      <div class="field">
-        <label for="email">이메일</label>
-        <input type="text" name="email" id="email">
-      </div>
-      <div class="field">
-        <label for="time">연락처</label>
-        <input type="text" name="phone" id="phone">
-      </div>
-      <div class="field">
-        <label for="message">문의 내용</label>
-        <textarea type="text" name="message" id="message"></textarea>
-      </div>
-
-      <input type="submit" id="button" value="Send Email">
-    </form>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-      emailjs.init('IdQkMq8KHuJBil0pc')
-    </script>
-  </section>
 
   <footer class="footer bottom_fadeIn">
 
