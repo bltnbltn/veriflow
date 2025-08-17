@@ -192,6 +192,13 @@ body {
   background: #e7eae7;
 }
 
+.caption {
+  text-align: right;
+  padding: 6px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
 /* ====================================
   Buttons
 ==================================== */
@@ -518,7 +525,7 @@ body {
   }
 
   .body-md {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* ====================================

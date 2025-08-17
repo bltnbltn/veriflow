@@ -23,21 +23,10 @@
   border-radius: 14px;
 }
 
-.card-badge {
-  font-family: Pretendard-Medium;
-  font-size: 14px;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  background: rgb(228, 246, 228);
-  color: var(--accent);
-  padding: 6px 12px;
-  border-bottom-right-radius: 6px; /* 카드 모서리랑 동일하게 둥글게 */
-  border-bottom-left-radius: 6px; /* 책갈피 느낌 */
-}
-
-.card-headline {
-  display: flex;
+.class-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle; /* 텍스트와 수직 중앙 정렬 */
 }
 
 .card-des {
@@ -55,10 +44,17 @@
   padding-bottom: 20px;
 }
 
-.caption {
-  text-align: right;
-  padding: 6px;
-  color: var(--gray);
+.card-badge {
+  font-family: Pretendard-Medium;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background: rgb(228, 246, 228);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-bottom-right-radius: 6px; /* 카드 모서리랑 동일하게 둥글게 */
+  border-bottom-left-radius: 6px; /* 책갈피 느낌 */
 }
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
