@@ -128,7 +128,7 @@ body {
 .wrapper {
   max-width: 1400px;
   margin: auto;
-  padding: 80px 16px;
+  padding: 100px 16px;
 }
 
 /* ====================================
@@ -277,50 +277,34 @@ body {
 ==================================== */
 
 /* Hero Fade */
-.top_fadeIn {
-  animation-name: example;
-  animation-duration: 2s;
-  position: relative;
-}
-
-@keyframes example {
-  0% {
-    opacity: 0;
-    top: -30px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-  }
-}
-
 .bottom_fadeIn {
-  animation-name: example2;
-  animation-duration: 1s;
+  animation-name: popUp;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* 스프링 느낌 */
   position: relative;
-  opacity: 0; /* 초기에 투명도를 0으로 설정 */
-  top: 30px; /* 초기에 상단으로 이동한 상태로 설정 */
-  animation-fill-mode: forwards; /* 애니메이션이 끝난 후 상태를 유지하도록 설정 */
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards; /* 끝나도 상태 유지 */
 }
 
 .bottom_fadeIn:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 .bottom_fadeIn:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .bottom_fadeIn:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 
-@keyframes example2 {
+@keyframes popUp {
   0% {
     opacity: 0;
-    top: 30px;
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    top: 0px;
+    transform: translateY(0);
   }
 }
 
@@ -631,7 +615,6 @@ body {
 
   .hero_container {
     display: block;
-    padding: 0px 16px;
   }
 
   /* Work Section --------------------------------- */

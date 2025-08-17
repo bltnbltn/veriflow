@@ -4,6 +4,10 @@
   background-size: cover;
 }
 
+.wide-section {
+  padding: 70px 0px;
+}
+
 .request-container {
   display: flex;
   justify-content: center;
@@ -95,6 +99,9 @@ input[type='submit'] {
 /* Request Section --------------------------------- */
 
 @media screen and (max-width: 767px) {
+  .wide-section {
+    padding: 0px 0px;
+  }
   .request-container {
     width: 100%;
     flex-direction: column;
