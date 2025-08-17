@@ -1,27 +1,29 @@
-/* Font Face --------------------------------- */
+/* ====================================
+   Fonts
+==================================== */
 
 @font-face {
   font-family: 'Pretendard-Light';
   src: url('./assets/fonts/Pretendard-Light.woff2') format('woff2');
-  font-weight: 300; /* Light = 300 */
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('./assets/fonts/Pretendard-Regular.woff2') format('woff2');
-  font-weight: 400; /* Regular = 400 */
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Pretendard-Medium';
   src: url('./assets/fonts/Pretendard-Medium.woff2') format('woff2');
-  font-weight: 500; /* Medium = 500 */
+  font-weight: 500;
 }
 
 @font-face {
   font-family: 'Pretendard-Bold';
   src: url('./assets/fonts/Pretendard-Bold.woff2') format('woff2');
-  font-weight: 700; /* Bold = 700 */
+  font-weight: 700;
 }
 
 @font-face {
@@ -29,18 +31,42 @@
   src: url('./assets/fonts/Colgent-Regular.woff') format('woff');
 }
 
-/* Colours --------------------------------- */
+/* ====================================
+   Root Variables
+==================================== */
 
 :root {
-  --black-color: #141714;
-  --white-text-color: #fff;
-  --background-color: #fff;
-  --accent-color: #489870;
-  --dark-gray-color: #717171;
-  --gray-color: #969996;
+  /* Colors */
+  --black: #141714;
+  --white: #fff;
+  --accent: #489870;
+  --dark-gray: #717171;
+  --gray: #969996;
+
+  /* Typography */
+  --font-base: 'Pretendard', sans-serif;
+  --font-heading: 'Colgent', serif;
+
+  --fs-xs: 12px;
+  --fs-sm: 16px;
+  --fs-md: 18px;
+  --fs-lg: 24px;
+  --fs-xl: 36px;
+  --fs-xxl: 70px;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 30px;
+  --radius-round: 100px;
+
+  /* Z-index */
+  --z-navbar: 1000;
 }
 
-/* Default --------------------------------- */
+/* ====================================
+   Reset / Base
+==================================== */
 
 * {
   box-sizing: border-box;
@@ -57,36 +83,57 @@ a {
   text-decoration: none;
 }
 
-/* Section --------------------------------- */
-.project_section {
-  max-width: 1400px;
-  margin: auto;
-  padding: 80px 20px 0px 20px;
+body {
+  font-family: var(--font-base);
+  color: var(--black);
+  background: var(--white);
 }
 
-.project {
-  margin-bottom: 30px;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 12px;
-}
-
-.project_des {
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-  align-items: flex-start; /* stretch 대신 왼쪽에 맞춤 */
-}
-
-/* Typography --------------------------------- */
-
-.section-title {
+/* Utility classes */
+.text-center {
   text-align: center;
 }
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.gap-sm {
+  gap: var(--sp-sm);
+}
+.gap-md {
+  gap: var(--sp-md);
+}
+.gap-lg {
+  gap: var(--sp-lg);
+}
+
+/* ====================================
+  Wrapper 
+==================================== */
+
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 16px;
+}
+
+/* ====================================
+   Typography
+==================================== */
 
 .heading-1 {
   font-family: Colgent;
@@ -99,7 +146,7 @@ a {
   font-family: Pretendard-Light;
   font-size: 70px;
   margin: auto;
-  color: var(--black-color);
+  color: var(--black);
   padding: 30px;
   text-align: center;
 }
@@ -112,26 +159,26 @@ a {
 .title-sm {
   font-family: Pretendard-Regular;
   font-size: 18px;
-  color: var(--black-color);
+  color: var(--black);
 }
 
 .body-md {
   font-family: Pretendard-Regular;
   font-size: 24px;
-  color: var(--black-color);
+  color: var(--black);
 }
 
 .body-sm {
   font-family: Pretendard-Light;
   font-size: 16px;
-  color: var(--black-color);
+  color: var(--black);
   line-height: 1.6;
 }
 
 .label-md {
   font-family: Pretendard-Medium;
   font-size: 16px;
-  color: var(--dark-gray-color);
+  color: var(--dark-gray);
 }
 
 .label-sm {
@@ -139,17 +186,19 @@ a {
   font-size: 12px;
   display: inline-block;
   letter-spacing: 0.5px;
-  color: var(--dark-gray-color);
+  color: var(--dark-gray);
   padding: 4px 8px;
   border-radius: 30px;
-  background-color: #e7eae7;
+  background: #e7eae7;
 }
 
-/* Buttons --------------------------------- */
+/* ====================================
+  Buttons
+==================================== */
 
 .button_primary {
-  color: var(--white-text-color);
-  background-color: var(--accent-color);
+  color: var(--white);
+  background: var(--accent);
   border: none;
   border-radius: 30px;
 }
@@ -162,197 +211,70 @@ a {
   font-family: Pretendard-Regular;
   font-weight: 500;
   border-radius: 100px;
-  color: var(--black-color);
+  color: var(--black);
   border: 1px solid #e0e5e3;
-  background-color: #ebedec;
+  background: #ebedec;
   padding: 12px 20px;
 }
 
-/* Navbar --------------------------------- */
+/* Page Navigation Buttons */
+.page-nav-right {
+  display: flex;
+  justify-content: end;
+}
 
-.navbar {
+.page-nav-left {
+  display: flex;
+  justify-content: start;
+}
+
+.page-nav-both {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  padding: 40px;
-  background-color: transparent;
-  position: fixed; /* 상단 고정 */
-  top: 0; /* 화면 상단에 고정 */
-  left: 0; /* 화면 왼쪽에 고정 */
-  right: 0; /* 화면 오른쪽에 고정 */
-  z-index: 1000; /* 다른 요소들 위에 배치 */
 }
 
-.nav_logo {
-  width: 30px;
-  height: auto;
+.page-nav {
+  width: 90%;
+  padding: 40px 0px;
+  margin: auto;
 }
 
-.nav_logo a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.nav_logo a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.nav_menu {
-  display: flex;
-  gap: 8px;
-  left: 0;
-}
-
-.nav_menu li a {
-  font-size: 16px;
-  font-family: Pretendard-Regular;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
-  padding: 12px 20px;
-}
-
-/* Hamburger Menu 숨기기*/
-
-.navbar_toggleBtn {
-  display: none;
-  right: 5%;
-  font-size: 24px;
-}
-
-/* Hero --------------------------------- */
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 700px; /* 부모 요소 높이를 화면 높이로 설정 */
-  overflow: hidden; /* 블러가 부모 영역을 넘지 않게 잘림 */
+.page-nav button {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-size: calc(72% + 10px);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.hero-background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: blur(90px);
-  animation: noise 1s infinite linear;
-  transform: translate(-50%, -50%);
-}
-
-.hero_container {
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.hero .heading-1 {
-  /* 텍스트 그라데이션 */
-  background: linear-gradient(
-    90deg,
-    rgb(24, 25, 25) 0%,
-    rgba(14, 15, 15, 0.8) 50%,
-    rgb(24, 25, 25) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.top_main_title {
-  margin-top: 40px;
-}
-
-/* Work --------------------------------- */
-
-.work-container {
-  width: 100%;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 10px 0px;
-}
-
-.work-card {
-  position: relative; /* 텍스트 기준 */
-  display: block;
-}
-
-.work-card img {
-  display: block;
-  width: 100%;
-  border-radius: 12px;
-}
-
-.work-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30%; /* 상단 30% 영역만 */
-  background: linear-gradient(
-    to bottom,
-    rgba(61, 63, 62, 0.2),
-    rgba(0, 0, 0, 0)
-  );
-  z-index: 1; /* 텍스트 위, 이미지 아래 */
-  pointer-events: none;
-  border-radius: 12px;
-}
-
-.label-overlay {
-  position: absolute;
-  top: 4%;
-  left: 4%;
-  color: var(--white-text-color);
-  z-index: 2;
-
-  /* 유리 효과 */
-  background: rgba(0, 0, 0, 0.1); /* 흰색 반투명 */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Safari 호환 */
-  padding: 6px 12px;
-  border-radius: 30px;
-}
-
-/* Footer --------------------------------- */
-
-.footer {
-  text-align: center;
-  padding: 8rem 4rem;
-  background-color: #fff;
-  font-family: Pretendard-Light;
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  color: #4d4d4d;
-}
-
-.social_link p {
+  background: transparent;
+  font-size: 40px;
+  border: none;
+  padding: 0px;
   cursor: pointer;
-  font-family: Colgent, Pretendard-Light;
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-family: Pretendard-Regular, serif;
 }
 
-.copyright {
-  color: var(--gray-color);
+.page-nav button a {
+  color: var(--black);
+  display: flex;
+  align-items: center;
 }
 
-/* Animation --------------------------------- */
+/* Hover 시에 Stroke 색상 변경, Fill은 면 색상 */
+.page-nav a:hover,
+.page-nav a:hover path {
+  color: var(--accent);
+  stroke: var(--accent);
+}
+
+.arrow-left {
+  margin-right: 12px;
+}
+
+.arrow-right {
+  margin-left: 12px;
+}
+
+/* ====================================
+  Animations & Transitions
+==================================== */
 
 /* Hero Fade */
 .top_fadeIn {
@@ -402,70 +324,205 @@ a {
   }
 }
 
-/* Casestduy Button*/
-.casestudy_right {
-  display: flex;
-  justify-content: end;
-}
+/* ====================================
+  Navbar
+==================================== */
 
-.casestudy_left {
-  display: flex;
-  justify-content: start;
-}
-
-.casestudy_both {
+.navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 40px;
+  background: transparent;
+  position: fixed; /* 상단 고정 */
+  top: 0; /* 화면 상단에 고정 */
+  left: 0; /* 화면 왼쪽에 고정 */
+  right: 0; /* 화면 오른쪽에 고정 */
+  z-index: 1000; /* 다른 요소들 위에 배치 */
 }
 
-.next_casestudy {
-  width: 90%;
-  padding: 40px 0px;
-  margin: auto;
+.nav_logo {
+  width: 30px;
+  height: auto;
 }
 
-.next_casestudy button {
+.nav_logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav_menu {
+  display: flex;
+  gap: 8px;
+  left: 0;
+}
+
+.nav_menu li a {
+  font-size: 16px;
+  font-family: Pretendard-Regular;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
+  padding: 12px 20px;
+}
+
+/* Hamburger Menu 숨기기*/
+
+.navbar_toggleBtn {
+  display: none;
+  right: 5%;
+  font-size: 24px;
+}
+
+/* Hero Section --------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 700px; /* 부모 요소 높이를 화면 높이로 설정 */
+  overflow: hidden; /* 블러가 부모 영역을 넘지 않게 잘림 */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  font-size: 40px;
-  border: none;
-  padding: 0px;
+  text-align: center;
+  background-size: calc(72% + 10px);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(90px);
+  animation: noise 1s infinite linear;
+  transform: translate(-50%, -50%);
+}
+
+.hero_container {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero .heading-1 {
+  /* 텍스트 그라데이션 */
+  background: linear-gradient(
+    90deg,
+    rgb(24, 25, 25) 0%,
+    rgba(14, 15, 15, 0.8) 50%,
+    rgb(24, 25, 25) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill: transparent;
+}
+
+/* Work Section--------------------------------- */
+
+.section-image {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 0px;
+}
+
+.work-card {
+  position: relative; /* 텍스트 기준 */
+  display: block;
+}
+
+.work-card img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.work-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 상단 30% 영역만 */
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 63, 62, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1; /* 텍스트 위, 이미지 아래 */
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.label-overlay {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  color: var(--white);
+  z-index: 2;
+
+  /* 유리 효과 */
+  background: rgba(0, 0, 0, 0.1); /* 흰색 반투명 */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari 호환 */
+  padding: 6px 12px;
+  border-radius: 30px;
+}
+
+/* Footer --------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 8rem 4rem;
+  background: #fff;
+  font-family: Pretendard-Light;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+
+.social_link p {
   cursor: pointer;
-  font-family: Pretendard-Regular, serif;
+  font-family: Colgent, Pretendard-Light;
+  font-size: 24px;
+  margin-bottom: 24px;
 }
 
-.next_casestudy button a {
-  color: var(--black-color);
-  display: flex;
-  align-items: center;
-}
-
-/* Hover 시에 Stroke 색상 변경, Fill은 면 색상 */
-.next_casestudy a:hover,
-.next_casestudy a:hover path {
-  color: var(--accent-color);
-  stroke: var(--accent-color);
-}
-
-.arrow_left {
-  margin-right: 12px;
-}
-
-.arrow_right {
-  margin-left: 12px;
+.copyright {
+  color: var(--gray);
 }
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
 @media screen and (max-width: 767px) {
-  /* Project --------------------------------- */
-  .project {
-    margin-bottom: 12px;
+  /* ====================================
+  Wrapper 
+==================================== */
+  .wrapper {
+    padding: 40px 16px;
   }
 
-  /* Typography --------------------------------- */
+  .wrapper--first {
+    padding-top: 80px;
+  }
+
+  /* ====================================
+   Typography
+==================================== */
   .heading-1 {
     font-size: 30px;
   }
@@ -477,17 +534,21 @@ a {
   }
 
   .body-md {
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  /* Work --------------------------------- */
+  /* ====================================
+  Buttons
+==================================== */
 
-  .work-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  /* Page Navigation Buttons */
+  .papge-nav button {
+    font-size: 24px;
   }
 
-  /* Navbar --------------------------------- */
+  /* ====================================
+  Navbar
+==================================== */
 
   .nav_logo img {
     width: 30px;
@@ -505,7 +566,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent;
+    background: transparent;
   }
 
   .nav_menu {
@@ -513,10 +574,10 @@ a {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    border-top: 1px solid var(--border1-color);
+    border-top: 1px solid var(--border1);
     top: 100%;
     width: 100%;
-    background-color: #fff;
+    background: #fff;
   }
 
   .nav_menu.active {
@@ -559,7 +620,7 @@ a {
     display: none;
   }
 
-  /* Hero --------------------------------- */
+  /* Hero Section --------------------------------- */
 
   .hero {
     display: flex;
@@ -573,18 +634,11 @@ a {
     padding: 0px 16px;
   }
 
-  .top_main_title {
-    margin-top: 50px;
-  }
+  /* Work Section --------------------------------- */
 
-  /* Project --------------------------------- */
-
-  .project_section {
-    padding: 16px;
-  }
-
-  .project_container {
+  .section-image {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   /* Footer --------------------------------- */
@@ -594,10 +648,5 @@ a {
 
   .copyright {
     margin: 2rem 0rem;
-  }
-
-  /* Project button ---------------------------*/
-  .next_casestudy button {
-    font-size: 24px;
   }
 }

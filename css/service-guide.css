@@ -1,5 +1,12 @@
+.service-guide {
+  height: 100vh;
+  background: #f9f9f9;
+  padding: var(--sp-xxl) var(--sp-lg) 0 var(--sp-lg);
+}
+
 .design-category {
-  padding: 40px 0px;
+  padding: 40px 0px 10px 0px;
+  text-align: center;
 }
 
 .service-guide-container {
@@ -11,6 +18,7 @@
   position: relative;
   width: 100%;
   padding: 40px;
+  background-color: var(--white);
   border: 1px solid rgb(229, 231, 230);
   border-radius: 14px;
 }
@@ -21,8 +29,8 @@
   position: absolute;
   top: 0;
   right: 20px;
-  background-color: rgb(228, 246, 228);
-  color: var(--accent-color);
+  background: rgb(228, 246, 228);
+  color: var(--accent);
   padding: 6px 12px;
   border-bottom-right-radius: 6px; /* 카드 모서리랑 동일하게 둥글게 */
   border-bottom-left-radius: 6px; /* 책갈피 느낌 */
@@ -50,7 +58,7 @@
 .caption {
   text-align: right;
   padding: 6px;
-  color: var(--gray-color);
+  color: var(--gray);
 }
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/

@@ -2,7 +2,7 @@
 .headline_web {
   font-family: Pretendard-Regular;
   font-size: 50px;
-  color: var(--black-color);
+  color: var(--black);
 }
 
 .title {
@@ -110,13 +110,13 @@
 }
 
 .color_palette1 {
-  background-color: #e48896;
+  background: #e48896;
 }
 .color_palette2 {
-  background-color: #903d52;
+  background: #903d52;
 }
 .color_palette3 {
-  background-color: #3b3b3b;
+  background: #3b3b3b;
 }
 
 /* Project --------------------------------- */

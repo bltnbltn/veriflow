@@ -1,8 +1,8 @@
-/* Tab Menu */
+/* Tab Menu Buttons */
 
 .tab-menu {
   display: flex;
-  gap: 32px; /* 메뉴 간격 */
+  gap: 32px;
   margin-bottom: 40px;
   justify-content: center;
 }
@@ -16,11 +16,11 @@
   cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
-  color: var(--gray-color); /* 비활성 글자 색 */
+  color: var(--gray);
 }
 
 .tab-btn.active {
-  color: var(--accent-color); /* 활성 글자 색 */
+  color: var(--accent);
 }
 
 .tab-btn.active::after {
@@ -30,7 +30,7 @@
   bottom: 4px;
   width: 100%;
   height: 2px;
-  background-color: var(--accent-color);
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 
@@ -43,7 +43,27 @@
   display: block;
 }
 
-/* UIUX --------------------------------- */
+/* Portfolio Section --------------------------------- */
+
+/* UIUX */
+
+.uiux-card {
+  margin-bottom: 30px;
+}
+
+.uiux-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.uiux-card_des {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start; /* stretch 대신 왼쪽에 맞춤 */
+}
 
 .uiux-container {
   width: 100%;
@@ -52,11 +72,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.uiux_project {
-  width: 100%;
-}
-
-/* Branding --------------------------------- */
+/* LOGO */
 
 .logo-container {
   width: 100%;
@@ -90,7 +106,7 @@
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
-  color: #fff;
+  color: var(--white);
   padding: 10px;
   font-family: Pretendard-Light;
   font-size: 16px;
@@ -108,6 +124,7 @@
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
 @media screen and (max-width: 767px) {
+  /* Tab Menu Buttons */
   .tab-menu {
     display: flex;
     gap: 32px; /* 메뉴 간격 */
@@ -118,18 +135,19 @@
   .tab-btn {
     font-size: 18px;
   }
-  /* UIUX --------------------------------- */
-  
+  /* Portfolio Section --------------------------------- */
+
+  .uiux-card {
+    margin-bottom: 12px;
+  }
+
+  /* UIUX  */
+
   .uiux-container {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* Branding --------------------------------- */
-
-  .modal-content {
-    width: 80%;
-  }
-
+  /* LOGO */
 
   .logo-container {
     width: 100%;

@@ -1,4 +1,8 @@
-/* Contact Form --------------------------------- */
+/* Request Section --------------------------------- */
+.request {
+  background: url('../assets/img/background.png') no-repeat center center;
+  background-size: cover;
+}
 
 .request-container {
   display: flex;
@@ -6,10 +10,9 @@
   align-items: flex-start;
   gap: 60px;
   font-family: Pretendard-Regular;
-  background: url('../assets/img/background.png') no-repeat center center;
-  background-size: cover;
-  padding: 180px 30px;
 }
+
+/* Contact Form */
 
 form {
   width: 90%;
@@ -55,7 +58,7 @@ form {
 }
 
 .field input:focus {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent);
 }
 
 input[type='submit'] {
@@ -64,8 +67,8 @@ input[type='submit'] {
   padding: 15px;
   margin-top: 10px;
   font-size: 18px;
-  color: var(--white-text-color);
-  background: var(--accent-color);
+  color: var(--white);
+  background: var(--accent);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -89,14 +92,17 @@ input[type='submit'] {
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
+/* Request Section --------------------------------- */
+
 @media screen and (max-width: 767px) {
   .request-container {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 16px 20px 40px 20px;
     gap: 30px;
   }
+
+  /* Contact Form */
 
   form {
     padding: 20px;
