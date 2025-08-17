@@ -144,7 +144,7 @@ body {
 
 .title-lg {
   font-family: Pretendard-Light;
-  font-size: 70px;
+  font-size: 60px;
   margin: auto;
   color: var(--black);
   padding: 30px;
@@ -479,7 +479,7 @@ body {
 .footer {
   text-align: center;
   padding: 8rem 4rem;
-  background: #fff;
+  background: transparent;
   font-family: Pretendard-Light;
   letter-spacing: 0.5px;
   font-size: 14px;

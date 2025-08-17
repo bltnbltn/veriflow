@@ -16,6 +16,10 @@
   font-family: Pretendard-Regular;
 }
 
+.semibold {
+  font-family: Pretendard-SemiBold;
+}
+
 /* Contact Form */
 
 form {

@@ -1,9 +1,7 @@
 /* Service Guide Section --------------------------------- */
 
-.service-guide {
-  height: 100vh;
+.service-guide-page {
   background: #f9f9f9;
-  padding: var(--sp-xxl) var(--sp-lg) 0 var(--sp-lg);
 }
 
 .design-category {
