@@ -1,3 +1,5 @@
+/* Portfolio Section --------------------------------- */
+
 /* Tab Menu Buttons */
 
 .tab-menu {
@@ -42,8 +44,6 @@
 .tab-content.active {
   display: block;
 }
-
-/* Portfolio Section --------------------------------- */
 
 /* UIUX */
 
