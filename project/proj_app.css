@@ -12,35 +12,35 @@
 }
 
 .title {
-  font-family: Pretendard-Medium;
+  font-weight: 500;
   font-size: 26px;
 }
 
 .subtitle {
   font-size: 16px;
-  font-family: Pretendard-SemiBold;
+  font-weight: 600;
   margin: 4px 0px 12px 0px;
 }
 
 .body_small {
   font-size: 14px;
-  font-family: Pretendard-Regular;
+  font-weight: 400;
   line-height: 1.5;
   color: #8a8d97;
 }
 
 .body_medium {
-  font-family: Pretendard-Light;
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .semibold {
-  font-family: Pretendard-SemiBold;
+  font-weight: 600;
 }
 
 .bold {
-  font-family: Pretendard-Bold;
+  font-weight: 700;
 }
 
 .numbered_list {
@@ -123,12 +123,12 @@ video {
 }
 
 .overview_info ul {
-  font-family: Pretendard-Light;
+  font-weight: 300;
   padding: 0px;
 }
 
 .overview_info ul li:first-child {
-  font-family: Pretendard-Medium;
+  font-weight: 500;
   margin-bottom: 8px;
 }
 

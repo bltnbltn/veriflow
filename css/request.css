@@ -13,11 +13,11 @@
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  font-family: Pretendard-Regular;
+  font-weight: 400;
 }
 
 .semibold {
-  font-family: Pretendard-SemiBold;
+  font-weight: 600;
 }
 
 /* Contact Form */
@@ -70,7 +70,7 @@ form {
 }
 
 input[type='submit'] {
-  font-family: Pretendard-Regular;
+  font-weight: 400;
   width: 100%;
   padding: 15px;
   margin-top: 10px;

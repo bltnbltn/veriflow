@@ -40,18 +40,18 @@
 }
 
 .des-title {
-  font-family: Pretendard-SemiBold;
+  font-weight: 600;
   padding-bottom: 20px;
 }
 
 .card-badge {
-  font-family: Pretendard-Medium;
+  font-weight: 500;
   font-size: 14px;
   position: absolute;
   top: 0;
   right: 20px;
-  background: rgb(228, 246, 228);
-  color: var(--accent);
+  background: rgb(231, 252, 255);
+  color: #1d9acb;
   padding: 6px 12px;
   border-bottom-right-radius: 6px; /* 카드 모서리랑 동일하게 둥글게 */
   border-bottom-left-radius: 6px; /* 책갈피 느낌 */

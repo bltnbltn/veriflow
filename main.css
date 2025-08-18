@@ -1,34 +1,43 @@
 /* ====================================
    Fonts
 ==================================== */
-
 @font-face {
-  font-family: 'Pretendard-Light';
+  font-family: 'Pretendard';
   src: url('./assets/fonts/Pretendard-Light.woff2') format('woff2');
   font-weight: 300;
+  /* Light */
 }
-
 @font-face {
-  font-family: 'Pretendard-Regular';
+  font-family: 'Pretendard';
   src: url('./assets/fonts/Pretendard-Regular.woff2') format('woff2');
   font-weight: 400;
+  /* Regular */
 }
-
 @font-face {
-  font-family: 'Pretendard-Medium';
+  font-family: 'Pretendard';
   src: url('./assets/fonts/Pretendard-Medium.woff2') format('woff2');
   font-weight: 500;
+  /* Medium */
 }
 
 @font-face {
-  font-family: 'Pretendard-Bold';
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  /* Medium */
+}
+
+@font-face {
+  font-family: 'Pretendard';
   src: url('./assets/fonts/Pretendard-Bold.woff2') format('woff2');
   font-weight: 700;
+  /* Bold */
 }
 
 @font-face {
-  font-family: Colgent;
+  font-family: 'Colgent';
   src: url('./assets/fonts/Colgent-Regular.woff') format('woff');
+  font-weight: normal;
 }
 
 /* ====================================
@@ -136,14 +145,15 @@ body {
 ==================================== */
 
 .heading-1 {
-  font-family: Colgent;
+  font-family: var(--font-heading);
   font-size: 50px;
   margin: auto;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
 .title-lg {
-  font-family: Pretendard-Light;
+  font-weight: 300;
   font-size: 60px;
   margin: auto;
   color: var(--black);
@@ -152,37 +162,37 @@ body {
 }
 
 .title-md {
-  font-family: Pretendard-Medium;
+  font-weight: 500;
   font-size: 24px;
 }
 
 .title-sm {
-  font-family: Pretendard-Regular;
+  font-weight: 400;
   font-size: 18px;
   color: var(--black);
 }
 
 .body-md {
-  font-family: Pretendard-Regular;
+  font-weight: 400;
   font-size: 24px;
   color: var(--black);
 }
 
 .body-sm {
-  font-family: Pretendard-Light;
+  font-weight: 300;
   font-size: 16px;
   color: var(--black);
   line-height: 1.6;
 }
 
 .label-md {
-  font-family: Pretendard-Medium;
+  font-weight: 500;
   font-size: 16px;
   color: var(--dark-gray);
 }
 
 .label-sm {
-  font-family: Pretendard-Light;
+  font-weight: 300;
   font-size: 12px;
   display: inline-block;
   letter-spacing: 0.5px;
@@ -215,8 +225,7 @@ body {
   cursor: pointer;
   text-align: center;
   margin: 20px 0px;
-  font-family: Pretendard-Regular;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 100px;
   color: var(--black);
   border: 1px solid #e0e5e3;
@@ -255,7 +264,7 @@ body {
   border: none;
   padding: 0px;
   cursor: pointer;
-  font-family: Pretendard-Regular, serif;
+  font-weight: 400;
 }
 
 .page-nav button a {
@@ -359,7 +368,7 @@ body {
 
 .nav_menu li a {
   font-size: 16px;
-  font-family: Pretendard-Regular;
+  font-weight: 400;
   letter-spacing: 0.5px;
   transition: color 0.3s ease; /* hover시에 색상 천천히 변화 */
   padding: 12px 20px;
@@ -480,7 +489,7 @@ body {
   text-align: center;
   padding: 8rem 4rem;
   background: transparent;
-  font-family: Pretendard-Light;
+  font-weight: 300;
   letter-spacing: 0.5px;
   font-size: 14px;
   color: #4d4d4d;
@@ -488,7 +497,8 @@ body {
 
 .social_link p {
   cursor: pointer;
-  font-family: Colgent, Pretendard-Light;
+  font-family: var(--font-heading);
+  font-weight: 300;
   font-size: 24px;
   margin-bottom: 24px;
 }
