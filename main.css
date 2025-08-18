@@ -24,7 +24,7 @@
   font-family: 'Pretendard';
   src: url('./assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
   font-weight: 600;
-  /* Medium */
+  /* SemiBold */
 }
 
 @font-face {
@@ -140,6 +140,10 @@ body {
   padding: 100px 16px;
 }
 
+.wrapper--first {
+  padding-top: 120px;
+}
+
 /* ====================================
    Typography
 ==================================== */
@@ -153,11 +157,9 @@ body {
 }
 
 .title-lg {
-  font-weight: 300;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 56px;
   margin: auto;
-  color: var(--black);
-  padding: 30px;
   text-align: center;
 }
 
@@ -169,19 +171,17 @@ body {
 .title-sm {
   font-weight: 400;
   font-size: 18px;
-  color: var(--black);
 }
 
 .body-md {
   font-weight: 400;
   font-size: 24px;
-  color: var(--black);
 }
 
 .body-sm {
   font-weight: 300;
   font-size: 16px;
-  color: var(--black);
+
   line-height: 1.6;
 }
 
@@ -432,12 +432,18 @@ body {
 
 /* Work Section--------------------------------- */
 
+.section-title {
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .section-image {
   width: 100%;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 10px 0px;
 }
 
 .work-card {
@@ -487,7 +493,7 @@ body {
 
 .footer {
   text-align: center;
-  padding: 8rem 4rem;
+  padding: 128px 64px;
   background: transparent;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -518,7 +524,7 @@ body {
   }
 
   .wrapper--first {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   /* ====================================
@@ -530,7 +536,6 @@ body {
 
   .title-lg {
     font-size: 36px;
-    padding: 20px 0px 6px 0px;
     letter-spacing: -1.5px;
   }
 
@@ -543,7 +548,7 @@ body {
 ==================================== */
 
   /* Page Navigation Buttons */
-  .papge-nav button {
+  .page-nav button {
     font-size: 24px;
   }
 
@@ -635,6 +640,9 @@ body {
   }
 
   /* Work Section --------------------------------- */
+  .section-title {
+    gap: 20px;
+  }
 
   .section-image {
     grid-template-columns: repeat(2, 1fr);
@@ -643,10 +651,6 @@ body {
 
   /* Footer --------------------------------- */
   .footer {
-    padding: 4rem 0rem;
-  }
-
-  .copyright {
-    margin: 2rem 0rem;
+    padding: 64px 0px;
   }
 }
