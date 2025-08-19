@@ -1,5 +1,5 @@
 /* Request Section --------------------------------- */
-.request {
+.request-section {
   background: url('../assets/img/background.png') no-repeat center center;
   background-size: cover;
 }
@@ -100,12 +100,13 @@ input[type='submit'] {
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
-/* Request Section --------------------------------- */
-
 @media screen and (max-width: 767px) {
+
+  /* Request Section --------------------------------- */
   .wide-section {
     padding: 0px 0px;
   }
+  
   .request-container {
     width: 100%;
     flex-direction: column;

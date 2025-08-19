@@ -3,12 +3,25 @@
 .service-guide-page {
   background: #f9f9f9;
 }
-.service-guide-container {
+
+.service-guide-content {
   display: flex;
   gap: 20px;
 }
 
-.card {
+.service-guide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 40px;
+  color: var(--dark-gray);
+}
+
+.service-guide-info ul {
+  margin-bottom: 8px;
+}
+
+.logo-service-item {
   position: relative;
   width: 100%;
   padding: 40px;
@@ -17,19 +30,23 @@
   border-radius: 14px;
 }
 
+.service-title h2 {
+  color: var(--dark-gray);
+}
+
 .class-icon img {
   width: 24px;
   height: 24px;
   vertical-align: middle; /* 텍스트와 수직 중앙 정렬 */
 }
 
-.card-des {
+.service-des {
   border-top: 1px solid rgba(83, 83, 83, 0.1); /* 흐린 회색 선 */
   padding-top: 16px; /* 선과 내용 사이 여백 */
   margin-top: 16px; /* 카드 타이틀과 간격 */
 }
 
-.card-des li {
+.service-des li {
   padding: 1px;
 }
 
@@ -54,8 +71,12 @@
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
 @media screen and (max-width: 767px) {
-  .service-guide-container {
+  .service-guide-content {
     display: flex;
     flex-direction: column;
+  }
+
+  .service-guide-info {
+    padding: 40px 16px;
   }
 }

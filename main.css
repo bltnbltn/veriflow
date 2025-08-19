@@ -52,22 +52,9 @@
   --dark-gray: #717171;
   --gray: #969996;
 
-  /* Typography */
+  /* Font */
   --font-base: 'Pretendard', sans-serif;
   --font-heading: 'Colgent', serif;
-
-  --fs-xs: 12px;
-  --fs-sm: 16px;
-  --fs-md: 18px;
-  --fs-lg: 24px;
-  --fs-xl: 36px;
-  --fs-xxl: 70px;
-
-  /* Border radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 30px;
-  --radius-round: 100px;
 
   /* Z-index */
   --z-navbar: 1000;
@@ -102,32 +89,21 @@ body {
 .text-center {
   text-align: center;
 }
-.flex {
-  display: flex;
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.flex-col {
-  flex-direction: column;
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
-.flex-between {
-  justify-content: space-between;
-}
-.flex-start {
-  justify-content: flex-start;
-}
-.flex-end {
-  justify-content: flex-end;
-}
-.items-center {
-  align-items: center;
-}
-.gap-sm {
-  gap: var(--sp-sm);
-}
-.gap-md {
-  gap: var(--sp-md);
-}
-.gap-lg {
-  gap: var(--sp-lg);
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /* ====================================
@@ -181,18 +157,22 @@ body {
 .body-sm {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1.6;
+}
 
+.body-xs {
+  font-weight: 400;
+  font-size: 13px;
   line-height: 1.6;
 }
 
 .label-md {
   font-weight: 500;
   font-size: 16px;
-  color: var(--dark-gray);
 }
 
 .label-sm {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   display: inline-block;
   letter-spacing: 0.5px;
@@ -384,7 +364,7 @@ body {
 
 /* Hero Section --------------------------------- */
 
-.hero {
+.hero-section {
   position: relative;
   width: 100%;
   height: 700px; /* 부모 요소 높이를 화면 높이로 설정 */
@@ -439,25 +419,18 @@ body {
   gap: 40px;
 }
 
-.section-image {
-  width: 100%;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.work-card {
+.work-item {
   position: relative; /* 텍스트 기준 */
   display: block;
 }
 
-.work-card img {
+.work-item img {
   display: block;
   width: 100%;
   border-radius: 12px;
 }
 
-.work-card::before {
+.work-item::before {
   content: '';
   position: absolute;
   top: 0;
@@ -644,9 +617,8 @@ body {
     gap: 20px;
   }
 
-  .section-image {
+  .work-content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
   }
 
   /* Footer --------------------------------- */
