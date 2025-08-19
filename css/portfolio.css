@@ -62,6 +62,13 @@
   align-items: flex-start; /* stretch 대신 왼쪽에 맞춤 */
 }
 
+.chip-sm {
+  color: var(--dark-gray);
+  padding: 4px 8px;
+  border-radius: 30px;
+  background: #e7eae7;
+}
+
 /* LOGO */
 
 .logo-item {

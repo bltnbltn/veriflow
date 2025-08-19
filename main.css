@@ -50,7 +50,7 @@
   --white: #fff;
   --accent: #489870;
   --dark-gray: #717171;
-  --gray: #969996;
+  --gray: #919191;
 
   /* Font */
   --font-base: 'Pretendard', sans-serif;
@@ -88,6 +88,10 @@ body {
 /* Utility classes */
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .grid-1 {
@@ -162,31 +166,26 @@ body {
 
 .body-xs {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
 .label-md {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 }
 
 .label-sm {
   font-weight: 400;
   font-size: 12px;
-  display: inline-block;
   letter-spacing: 0.5px;
-  color: var(--dark-gray);
-  padding: 4px 8px;
-  border-radius: 30px;
-  background: #e7eae7;
 }
 
 .caption {
-  text-align: right;
+  font-weight: 400;
+  font-size: 14px;
   padding: 6px;
   color: var(--gray);
-  font-size: 14px;
 }
 
 /* ====================================

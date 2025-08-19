@@ -101,12 +101,11 @@ input[type='submit'] {
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
 
 @media screen and (max-width: 767px) {
-
   /* Request Section --------------------------------- */
   .wide-section {
     padding: 0px 0px;
   }
-  
+
   .request-container {
     width: 100%;
     flex-direction: column;
