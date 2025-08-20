@@ -55,6 +55,7 @@ form {
   margin: 8px 0;
   border: 1px solid rgba(255, 255, 255, 0.3); /* 경계 살짝 */
   border-radius: 8px;
+  resize: none;
 
   /* 유리 효과 */
   background: rgba(255, 255, 255, 0.2);
@@ -72,8 +73,8 @@ form {
 input[type='submit'] {
   font-weight: 400;
   width: 100%;
-  padding: 15px;
-  margin-top: 10px;
+  padding: 16px;
+  margin-top: 8px;
   font-size: 18px;
   color: var(--white);
   background: var(--accent);
@@ -98,21 +99,52 @@ input[type='submit'] {
   line-height: 150%;
 }
 
-#privacy-info {
-  resize: none;
-  height: 120px;
-}
 
 .privacy-info-checkbox {
   display: flex;
-  gap: 4px;
-  padding: 6px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  cursor: pointer;
 }
 
 .check-box {
-  width: 20px;
-  height: 20px;
-  border: solid 1px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 경계 살짝 */
+  border-radius: 6px;
+
+  /* 유리 효과 */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Safari 대응 */
+}
+
+/* 체크 아이콘 숨기기 */
+.check-box .check-icon {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* 체크되면 아이콘 보이기 */
+.check-box.checked .check-icon {
+  display: block;
+}
+
+.check-box.checked {
+  background-color: var(--accent);
+  border: var(--accent);
+}
+
+.required {
+  color: rgb(231, 34, 34);
+  margin-left: 2px;
 }
 
 /*////////////////////////////////////// MOBILE, ~ 767 /////////////////////////////////////*/
