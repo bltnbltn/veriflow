@@ -6,7 +6,7 @@
   display: flex;
   gap: 32px;
   justify-content: center;
-  padding: 30px;
+  padding: 36px;
 }
 
 .tab-btn {
@@ -125,6 +125,7 @@
     display: flex;
     gap: 32px;
     justify-content: center;
+    padding: 10px 0px 24px 0px;
   }
 
   /* Portfolio Section --------------------------------- */

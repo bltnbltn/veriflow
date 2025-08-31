@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
+  background: transparent; /* 배경색 제거 */
   font-weight: 400;
 }
 
@@ -20,14 +21,34 @@
   font-weight: 600;
 }
 
+.social-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.btn-text {
+  padding: 4px 0px;
+  border-bottom: 1px solid;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+
 /* Contact Form */
 
 form {
   width: 90%;
-  max-width: 600px;
+  max-width: 580px;
   display: flex;
   flex-direction: column;
-  padding: 40px 60px;
+  padding: 40px 56px;
 
   /* 유리 효과 */
   background: rgba(223, 222, 222, 0.4); /* 반투명 흰색 */
@@ -86,8 +107,7 @@ input[type='submit'] {
 
 #message {
   width: 100%;
-  height: 180px;
-  padding: 20px;
+  height: 160px;
   font-family: inherit;
   font-size: 16px;
   outline: none;
@@ -98,7 +118,6 @@ input[type='submit'] {
   box-sizing: border-box; /* padding 포함 너비 계산 */
   line-height: 150%;
 }
-
 
 .privacy-info-checkbox {
   display: flex;

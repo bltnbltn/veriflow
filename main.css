@@ -139,8 +139,6 @@ body {
 .title-lg {
   font-weight: 400;
   font-size: 56px;
-  margin: auto;
-  text-align: center;
 }
 
 .title-md {
@@ -155,7 +153,7 @@ body {
 
 .body-md {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .body-sm {
@@ -492,7 +490,7 @@ body {
   Wrapper 
 ==================================== */
   .wrapper {
-    padding: 40px 16px;
+    padding: 30px 16px;
   }
 
   .wrapper--first {
@@ -563,7 +561,7 @@ body {
     display: flex;
     gap: 40px;
     margin: auto;
-    padding: 120px;
+    padding: 60px;
   }
 
   .nav_menu li {
@@ -600,7 +598,7 @@ body {
 
   /* Hero Section --------------------------------- */
 
-  .hero {
+  .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
