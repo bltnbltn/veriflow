@@ -1,20 +1,20 @@
 /* Request Section --------------------------------- */
-.request-section {
-  background: url('../assets/img/background.png') no-repeat center center;
-  background-size: cover;
-}
-
-.wide-section {
-  padding: 50px 0px;
-}
 
 .request-container {
+  background: url('../assets/img/background.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  background: transparent; /* 배경색 제거 */
   font-weight: 400;
+  padding: 140px;
+}
+
+.wide-section {
+  padding: 50px 0px;
 }
 
 .semibold {
@@ -179,6 +179,7 @@ input[type='submit'] {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    padding: 50px 16px;
   }
 
   /* Contact Form */
