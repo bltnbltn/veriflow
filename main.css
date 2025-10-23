@@ -79,7 +79,8 @@ a {
   text-decoration: none;
 }
 
-body {
+body,
+button {
   font-family: var(--font-base);
   color: var(--black);
   background: var(--white);
