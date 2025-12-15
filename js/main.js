@@ -152,6 +152,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => window.scrollTo(0, 0), 1);
     sessionStorage.removeItem('activePortfolioTab');
   } else {
-    activateTab('uiux'); // 기본 탭
+    activateTab('logo'); // 기본 탭
   }
 });
